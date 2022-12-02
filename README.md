@@ -29,7 +29,7 @@ Every Punk can make any contributions to share your styles and unsual ~~code sni
 - Format file in order:
     - Heading
     - Subheading (optional)
-    - Desciptions
+    - Descriptions
     - ~~Code Snippet~~ Metaphor
     - Your Punk Signature!
 
