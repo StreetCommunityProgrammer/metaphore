@@ -15,12 +15,12 @@ Public Collections of Metaphor our Freestylers accross the world. Gain knowledge
 - [Zig Metaphors](/collections/zig/README.md)
 
 ## Contributing
-Every Punk can make any contributions to share your styles and unsual metaphor that belived it's something ~~wrong~~ different in traditional theory or usual business, but it's work! That our **Punk Freestyle Engineer**. Welcome to the Street Community Programmer.
+Every Punk can make any contributions to share your styles and unsual ~~code snippet~~ metaphor that belived it's something ~~wrong~~ different in traditional theory or usual business, but it's work! That our **Punk Freestyle Engineer**. Welcome to the Street Community Programmer.
 
 ## How to
 - Like & Clone this repository
-- Write your metaphor in `collections` directory based on your metaphor interest <sup>[[1]](#rules)</sup>
-- Add your metaphor `title` and your github `username` (in the end of line) into `README.md` and sort in A-Z!
+- Write your ~~code snippet~~ metaphor in `collections` directory based on your metaphor interest <sup>[[1]](#metaphor-writing-rules)</sup>
+- Add your ~~code snippet~~ metaphor `title` and your github `username` (in the end of line) into `README.md` and sort in A-Z!
 - and make your pull request!
 
 ## Metaphor Writing Rules
