@@ -1,7 +1,7 @@
 name: Add a Metaphore
 description: Add this metaphore to the list
 title: 'Add [METAPHORE NAME]'
-labels: [add metaphore]
+labels: ["punk::request"]
 body:
   - type: markdown
     attributes:
