@@ -1,0 +1,28 @@
+name: Feature Punk Request
+about: Suggest an idea for this project
+title: 'Punk Idea: [YOUR MIND BLOWING IDEA]'
+labels: ["punk::idea"]
+assignees:
+  - darkterminal
+  - mkubdev
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hello Punk! Thanks you before going submit new mind blowing punk idea
+  - type: input
+    id: contact
+    attributes:
+      label: Is your mind blowing punk idea is something that ~wrong~ different then other.
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com, discord username, any else...
+    validations:
+      required: true
+  - type: textarea
+    id: what-is-this
+    attributes:
+      label: Tell me what you want to suggest
+      description: "Don't be shy, your idea will blow up over the earth! Yo will be great freestyler!"
+      placeholder: "Something awesome happen in my head and tell me this...."
+    validations:
+      required: true
