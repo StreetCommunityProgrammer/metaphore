@@ -33,5 +33,9 @@ Every Punk can make any contributions to share your styles and unsual ~~code sni
     - ~~Code Snippet~~ Metaphor
     - Your Punk Signature!
 
+## Writting Shortcut
+
+Create issue to [request to add](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=&labels=add+metaphore&template=metaphore_request.yml&title=Add+%5BMETAPHORE+NAME%5D) your metaphor to our repository. That's it!
+
 ## Notes
 _Every metaphor in this repository is public and everyone can used for free._
