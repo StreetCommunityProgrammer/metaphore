@@ -13,7 +13,7 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Is your mind blowing punk idea is something that ~wrong~ different then other.
+      label: Is your mind blowing punk idea is something that ~~wrong~~ different then other.
       description: How can we get in touch with you if we need more info?
       placeholder: ex. email@example.com, discord username, any else...
     validations:
