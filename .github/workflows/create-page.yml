@@ -1,0 +1,15 @@
+on:
+  issues:
+    types:
+      - "closed"
+
+jobs:
+  create-meta-page:
+    runs-on: ubuntu-latest
+    name: 'Metaphor Creation'
+    steps:
+      - name: "Use punk creator"
+        id: message
+        uses: actions/create-metaphor-page@v1.1
+      - name: "Get Action Message"
+        run: echo "The time was ${{ steps.message.outputs.message }}"
