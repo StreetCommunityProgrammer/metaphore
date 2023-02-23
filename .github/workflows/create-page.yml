@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: "Use punk creator"
         id: message
-        uses: actions/create-metaphor-page@v1.1
+        uses: darkterminal/create-metaphor-page@v1.1
       - name: "Get Action Message"
         run: echo "The time was ${{ steps.message.outputs.message }}"
