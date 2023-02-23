@@ -9,6 +9,8 @@ jobs:
     name: 'Metaphor Creation'
     steps:
       - name: "Use punk creator"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         id: message
         uses: darkterminal/create-metaphor-page@v0.0.4
       - name: "Get Action Message"
