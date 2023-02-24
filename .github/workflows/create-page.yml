@@ -8,8 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Metaphor Creation'
     steps:
-      - name: "Use punk creator"
+      - uses: actions/checkout@v1
+      - uses: darkterminal/create-metaphor-page@v0.0.6
+        name: "Use punk creator"
         id: message
-        uses: darkterminal/create-metaphor-page@v0.0.6
       - name: "Get Action Message"
         run: echo "The time was ${{ steps.message.outputs.message }}"
