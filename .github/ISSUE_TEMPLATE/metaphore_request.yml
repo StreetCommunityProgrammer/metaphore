@@ -16,7 +16,7 @@ body:
   - type: textarea
     id: content
     attributes:
-      label: Share your metaphore story!
+      label: Metaphore story!
       placeholder: 'To build this automation, i used the websocket library...'
     validations:
       required: true
