@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Metaphor Creation'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: "Use punk creator"
         id: message
         uses: darkterminal/create-metaphor-page@v0.0.6
