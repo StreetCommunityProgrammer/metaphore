@@ -11,6 +11,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: "Use punk creator"
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
         id: message
         uses: darkterminal/create-metaphor-page@v0.0.4
       - name: "Get Action Message"
