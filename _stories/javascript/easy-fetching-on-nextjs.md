@@ -1,6 +1,6 @@
 ---
 layout: post
-title: add-easy-fetching-on-nextjs
+title: Easy fetching on Next.js
 author: mkubdev
 created_at: 2022-12-05T17:05:04Z
 language: javascript
@@ -17,15 +17,18 @@ Sometimes, we face fetching issue between `development` and `production` NODE_EN
 A quick utility could be:
 * Create a `config/index.tsx` at the root of the project
 * Add:
-```tsx
+
+```typescript
 const dev = process.env.NODE_ENV !== "production";
 
 export const server = dev
   ? "http://localhost:3000"
   : "https://your_deployment.server.com";
 ```
+
 * And use this *metaphore* this way on SSR strategy pages:
-```tsx
+
+```typescript
 // src/pages/index.tsx
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -63,6 +66,7 @@ export async function getServerSideProps(context) {
   };
 }
 ```
+
 * Once you ship the app in production server, just update `config/index.tsx` accordingly
 
 

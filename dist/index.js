@@ -16125,7 +16125,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'css', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'css', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16152,7 +16152,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'javascript', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'javascript', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16179,7 +16179,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'java', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'java', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16206,7 +16206,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'maths', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'maths', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16233,7 +16233,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'python', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'python', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16260,7 +16260,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'php', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'php', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16287,7 +16287,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'physics', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'physics', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16314,7 +16314,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'ruby', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'ruby', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16341,7 +16341,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'rust', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'rust', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
@@ -16368,7 +16368,7 @@ async function run() {
         const result = await replace({
           files: 'templates/stories.txt',
           from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [metaphorTitle, issue.data.user.login, issue.data.created_at, 'zig', issueData.body]
+          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'zig', issueData.body]
         })
         console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
         const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
