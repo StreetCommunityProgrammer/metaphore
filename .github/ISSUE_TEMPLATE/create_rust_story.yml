@@ -1,7 +1,7 @@
-name: Create CSS Story
+name: Create Rust Story
 description: Add this story to the list
 title: 'Your Story Title'
-labels: ["metaphore", "css"]
+labels: ["metaphore", "rust"]
 assignees:
   - darkterminal
   - mkubdev
