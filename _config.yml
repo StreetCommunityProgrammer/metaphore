@@ -13,7 +13,6 @@ color_scheme: nil
 
 collections:
    metaphors:
-    permalink: "/:collection/:path"
     output: true
 
 just_the_docs:
