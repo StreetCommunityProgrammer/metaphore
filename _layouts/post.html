@@ -9,4 +9,4 @@ layout: default
     <span>Author: <a href="https://github.com/{{ page.author }}" target="_blank">{{ page.author }}</a> &mdash; Created At: {{ page.created_at | date: "%Y-%m-%d %H:%M" }} &mdash; Language: <strong>{{ page.language }}</strong></span>
 </div>
 
-{{ content }}
+{{ content | markdownify }}
