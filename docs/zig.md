@@ -13,7 +13,7 @@ This page contains any unsual ~~code snippets~~ metaphors from our Zig Punk Memb
 [Create Zig Story](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Czig&template=create_zig_story.yml&title=Your+Story+Title){:target="_blank" .btn .btn-purple}
 
 ## List of Metaphors
-{% assign zig = site.stories | where: "language", "zig" %}
+{% assign zig = site.stories | where: "language", "zig"  | sort: "created_at" | reverse %}
 {% for metaphor in zig %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}
