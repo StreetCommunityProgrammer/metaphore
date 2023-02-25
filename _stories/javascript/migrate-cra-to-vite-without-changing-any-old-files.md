@@ -38,7 +38,7 @@ But wait... Vite work out of the book using `.tsx` and `.jsx` when first initial
 
 So, here the step to chill and migrate...
 
-1. Create file `vite.config.js` in the root directory
+* Create file `vite.config.js` in the root directory
 
 ```javascript
 import { defineConfig, loadEnv } from 'vite'
@@ -83,21 +83,20 @@ export default ({ mode }) => {
 }
 ```
 
-2. Remove all `react-scripts` command and package in `package.json`
+* Remove all `react-scripts` command and package in `package.json`
 
 ```json
 {
-    // ...other mataphor
    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-     }
-    // ...other mataphor
-]
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+   },
+}
 ```
 
-3. Move `index.html` from `public` directory to root of project, and also make sure:
+* Move `index.html` from `public` directory to root of project, and also make sure:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,8 +114,8 @@ export default ({ mode }) => {
 </html>
 ```
 
-5. Change `env` variable prefix `REACT_APP_` with `VITE_`
-6. Install `vite` as dev dependencies `npm i --save-dev @types/react @types/react-dom @vitejs/plugin-react vite`
+* Change `env` variable prefix `REACT_APP_` with `VITE_`
+* Install `vite` as dev dependencies `npm i --save-dev @types/react @types/react-dom @vitejs/plugin-react vite`
 
 Here my new directory structure
 
