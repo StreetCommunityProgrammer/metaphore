@@ -11,7 +11,7 @@ permalink: /rust
 This page contains any unsual ~~code snippets~~ metaphors from our Rust Punk Member.
 
 ## List of Metaphors
-{% assign rust = site.metaphors | where: "language", "rust" %}
+{% assign rust = site.stories | where: "language", "rust" %}
 {% for metaphor in rust %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

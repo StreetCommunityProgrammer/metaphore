@@ -10,7 +10,7 @@ permalink: /maths
 This page contains any unsual ~~code snippets~~ metaphors from our Maths Punk Member.
 
 ## List of Metaphors
-{% assign maths = site.metaphors | where: "language", "maths" %}
+{% assign maths = site.stories | where: "language", "maths" %}
 {% for metaphor in maths %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

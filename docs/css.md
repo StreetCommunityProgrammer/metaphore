@@ -11,7 +11,7 @@ permalink: /css
 This page contains any unsual ~~code snippets~~ metaphors from our CSS Punk Member.
 
 ## List of Metaphors
-{% assign css = site.metaphors | where: "language", "css" %}
+{% assign css = site.stories | where: "language", "css" %}
 {% for metaphor in css %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

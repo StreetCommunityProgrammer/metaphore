@@ -11,7 +11,7 @@ permalink: /physics
 This page contains any unsual ~~code snippets~~ metaphors from our Physics Punk Member.
 
 ## List of Metaphors
-{% assign physics = site.metaphors | where: "language", "physics" %}
+{% assign physics = site.stories | where: "language", "physics" %}
 {% for metaphor in physics %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

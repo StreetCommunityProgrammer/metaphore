@@ -10,7 +10,7 @@ permalink: /javascript
 This page contains any unsual ~~code snippets~~ metaphors from our JavaScript Punk Member.
 
 ## List of Metaphors
-{% assign javascript = site.metaphors | where: "language", "javascript" %}
+{% assign javascript = site.stories | where: "language", "javascript" %}
 {% for metaphor in javascript %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

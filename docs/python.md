@@ -11,7 +11,7 @@ permalink: /python
 This page contains any unsual ~~code snippets~~ metaphors from our Python Punk Member.
 
 ## List of Metaphors
-{% assign python = site.metaphors | where: "language", "python" %}
+{% assign python = site.stories | where: "language", "python" %}
 {% for metaphor in python %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

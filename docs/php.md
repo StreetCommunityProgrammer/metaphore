@@ -11,7 +11,7 @@ permalink: /php
 This page contains any unsual ~~code snippets~~ metaphors from our PHP Punk Member.
 
 ## List of Metaphors
-{% assign php = site.metaphors | where: "language", "php" %}
+{% assign php = site.stories | where: "language", "php" %}
 {% for metaphor in php %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

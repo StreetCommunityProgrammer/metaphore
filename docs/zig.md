@@ -11,7 +11,7 @@ permalink: /zig
 This page contains any unsual ~~code snippets~~ metaphors from our Zig Punk Member.
 
 ## List of Metaphors
-{% assign zig = site.metaphors | where: "language", "zig" %}
+{% assign zig = site.stories | where: "language", "zig" %}
 {% for metaphor in zig %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

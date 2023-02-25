@@ -11,7 +11,7 @@ permalink: /ruby
 This page contains any unsual ~~code snippets~~ metaphors from our Ruby Punk Member.
 
 ## List of Metaphors
-{% assign ruby = site.metaphors | where: "language", "ruby" %}
+{% assign ruby = site.stories | where: "language", "ruby" %}
 {% for metaphor in ruby %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

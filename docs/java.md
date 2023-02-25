@@ -11,7 +11,7 @@ permalink: /java
 This page contains any unsual ~~code snippets~~ metaphors from our Java Punk Member.
 
 ## List of Metaphors
-{% assign java = site.metaphors | where: "language", "java" %}
+{% assign java = site.stories | where: "language", "java" %}
 {% for metaphor in java %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

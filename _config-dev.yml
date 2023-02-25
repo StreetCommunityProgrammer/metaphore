@@ -11,13 +11,15 @@ aux_links:
 
 color_scheme: nil
 
+footer_content: "<a href=\"https://github.com/StreetCommunityProgrammer\">Street Community Programmer (SCP)</a> made from Developer ❤️ Developer."
+
 collections:
-   metaphors:
+   stories:
     output: true
 
 just_the_docs:
   collections:
-    metaphors:
+    stories:
       nav_exclude: true
 
 callouts_level: quiet # or loud
