@@ -1,7 +1,10 @@
-name: Add a Metaphore
-description: Add this metaphore to the list
-title: 'Add [METAPHORE NAME]'
-labels: ["metaphore"]
+name: Create CSS Story
+description: Add this story to the list
+title: 'Your Story Title'
+labels: ["metaphore", "css"]
+assignees:
+  - darkterminal
+  - mkubdev
 body:
   - type: markdown
     attributes:
@@ -9,8 +12,8 @@ body:
   - type: input
     id: title
     attributes:
-      label: Metaphore Name
-      placeholder: 'e.g.: Print from a React Native app'
+      label: Your Back Story about this Metaphor
+      placeholder: 'e.g.: When I build POS Web Based I need...'
     validations:
       required: true
   - type: textarea
@@ -24,4 +27,4 @@ body:
     id: link
     attributes:
       label: A demo/repos link
-      placeholder: 'e.g.: https://github.com.com/StreetProgramerCommunity/my-repos'
+      placeholder: 'e.g.: https://github.com.com/username/my-repos'
