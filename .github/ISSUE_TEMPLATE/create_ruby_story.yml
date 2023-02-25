@@ -2,9 +2,7 @@ name: Create Ruby Story
 description: Add this story to the list
 title: 'Your Story Title'
 labels: ["metaphore", "ruby"]
-assignees:
-  - darkterminal
-  - mkubdev
+assignees: ["darkterminal", "mkubdev"]
 body:
   - type: markdown
     attributes:

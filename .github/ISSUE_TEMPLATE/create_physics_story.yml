@@ -2,9 +2,7 @@ name: Create Physics Story
 description: Add this story to the list
 title: 'Your Story Title'
 labels: ["metaphore", "physics"]
-assignees:
-  - darkterminal
-  - mkubdev
+assignees: ["darkterminal", "mkubdev"]
 body:
   - type: markdown
     attributes:

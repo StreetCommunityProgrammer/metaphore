@@ -2,9 +2,7 @@ name: Create Maths Story
 description: Add this story to the list
 title: 'Your Story Title'
 labels: ["metaphore", "maths"]
-assignees:
-  - darkterminal
-  - mkubdev
+assignees: ["darkterminal", "mkubdev"]
 body:
   - type: markdown
     attributes:
