@@ -1,7 +1,6 @@
 title: SCP | Metaphor
 favicon_ico: "/assets/images/metaphor-square.png"
 description: Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members. 
-remote_theme: pmarsceill/just-the-docs
 theme: just-the-docs
 url: https://streetcommunityprogrammer.github.io/metaphore
 
@@ -14,7 +13,7 @@ color_scheme: nil
 
 collections:
    metaphors:
-    permalink: "/:collection/:title"
+    permalink: "/:collection/:path"
     output: true
 
 just_the_docs:
