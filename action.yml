@@ -1,0 +1,9 @@
+name: "Check Closed Issues and Generate New Story"
+description: "Punk will check cloesed Issue and generate story"
+inputs:
+    github-token:
+        description: "GitHub token for repo"
+        required: true
+runs:
+    using: "node16"
+    main: "dist/index.js"

@@ -1,18 +1,13 @@
 on:
-  issues:
-    types:
-      - "closed"
+    issues:
+        types: [closed]
 
 jobs:
-  create-meta-page:
-    runs-on: ubuntu-latest
-    name: 'Metaphor Creation'
-    steps:
-      - uses: actions/checkout@v1
-      - name: "Use punk creator"
-        id: message
-        uses: darkterminal/create-metaphor-page@v0.0.8
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: "Get Action Message"
-        run: echo "The time was ${{ steps.message.outputs.message }}"
+    issue_is_closed:
+        name: Fetch cloesed issue detail
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@main
+            - uses: StreetCommunityProgrammer/metaphore@main # Uses an action in the root directory
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
