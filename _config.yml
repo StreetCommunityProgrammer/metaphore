@@ -13,7 +13,7 @@ color_scheme: nil
 
 collections:
    metaphors:
-    permalink: "/:collection/:path/:title"
+    permalink: "/:collection/:path"
     output: true
 
 callouts_level: quiet # or loud
