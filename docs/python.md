@@ -10,10 +10,12 @@ permalink: /python
 
 This page contains any unsual ~~code snippets~~ metaphors from our Python Punk Member.
 
+[Create Python Story](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Cpython&template=create_python_story.yml&title=Your+Story+Title){:target="_blank" .btn .btn-purple}
+
 ## List of Metaphors
 {% assign python = site.stories | where: "language", "python" %}
 {% for metaphor in python %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}
-  _The **Python** collection is empty. Did you have metaphor in Python? [Create my Python metaphor](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=&labels=metaphore&template=metaphore_request.yml&title=Add+%5BMETAPHORE+NAME%5D){:target="_blank"}_
+  _The **Python** collection is empty. Did you have metaphor in Python? [Create my Python metaphor](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Cpython&template=create_python_story.yml&title=Your+Story+Title){:target="_blank"}_
 {% endfor %}

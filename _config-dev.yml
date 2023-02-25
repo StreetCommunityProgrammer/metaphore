@@ -51,3 +51,22 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - LICENSE
+   - README.md
+   - templates/
+   - dist/
