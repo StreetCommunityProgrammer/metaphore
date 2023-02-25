@@ -13,7 +13,7 @@ This page contains any unsual ~~code snippets~~ metaphors from our Python Punk M
 ## List of Metaphors
 {% assign python = site.metaphors | where: "language", "python" %}
 {% for metaphor in python %}
-- [{{ metaphor.title }}]({{ metaphor.url }})
+- [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}
   _The **Python** collection is empty. Did you have metaphor in Python? [Create my Python metaphor](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=&labels=metaphore&template=metaphore_request.yml&title=Add+%5BMETAPHORE+NAME%5D){:target="_blank"}_
 {% endfor %}
