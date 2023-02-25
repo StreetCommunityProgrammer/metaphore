@@ -2,9 +2,7 @@ name: Feature Punk Request
 description: Add your feature suggestion
 title: 'Punk Idea: [YOUR MIND BLOWING IDEA]'
 labels: ["punk::idea"]
-assignees:
-  - darkterminal
-  - mkubdev
+assignees: ["darkterminal", "mkubdev"]
 body:
   - type: markdown
     attributes:

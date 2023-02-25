@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Story as Code. Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members."
 permalink: /
 ---
 
@@ -11,6 +11,14 @@ permalink: /
 
 Story as Code. Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.
 {: .fs-6 .fw-300 }
+
+## Prologue
+
+Hello Punk! We are street programmer that work out of the box in everyway of traditional theory and we're not calling snippet of code but called as Metaphor.
+
+Basically programming language is a bridge to communicate with other people in the world without speak in their national language, we can collaborate each other without knowing our national language.
+
+We called our member Punk/Freestyler/Software Freestyle Engineer that create some Metaphor to make this world more better.
 
 ## Contributing
 
