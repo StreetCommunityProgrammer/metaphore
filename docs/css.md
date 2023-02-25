@@ -13,7 +13,7 @@ This page contains any unsual ~~code snippets~~ metaphors from our CSS Punk Memb
 [Create CSS Story](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Ccss&template=create_css_story.yml&title=Your+Story+Title){:target="_blank" .btn .btn-purple}
 
 ## List of Metaphors
-{% assign css = site.stories | where: "language", "css" %}
+{% assign css = site.stories | where: "language", "css"  | sort: "created_at" | reverse %}
 {% for metaphor in css %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

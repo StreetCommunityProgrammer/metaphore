@@ -12,7 +12,7 @@ This page contains any unsual ~~code snippets~~ metaphors from our Maths Punk Me
 [Create Maths Story](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Cmaths&template=create_maths_story.yml&title=Your+Story+Title){:target="_blank" .btn .btn-purple}
 
 ## List of Metaphors
-{% assign maths = site.stories | where: "language", "maths" %}
+{% assign maths = site.stories | where: "language", "maths"  | sort: "created_at" | reverse %}
 {% for metaphor in maths %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}

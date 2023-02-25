@@ -13,7 +13,7 @@ This page contains any unsual ~~code snippets~~ metaphors from our Rust Punk Mem
 [Create Rust Story](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2Crust&template=create_rust_story.yml&title=Your+Story+Title){:target="_blank" .btn .btn-purple}
 
 ## List of Metaphors
-{% assign rust = site.stories | where: "language", "rust" %}
+{% assign rust = site.stories | where: "language", "rust"  | sort: "created_at" | reverse %}
 {% for metaphor in rust %}
 - [{{ metaphor.title }} by {{ metaphor.author }}]({{ metaphor.url | relative_url }})
 {% else %}
