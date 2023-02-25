@@ -1,41 +1,20 @@
 ![Metaphor](metaphor.png)
-<center>
-<h1>- Metaphore -</h1>
-Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.
-</center>
+<p align="center">
+    <h1 align="center">Metaphore</h1>
+    <p align="center">Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.
+</p>
+    <p align="center"><strong><a href="https://streetcommunityprogrammer.github.io/metaphore/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
 
-## Collections
-- [Java Metaphors](/collections/java/README.md)
-- [JavaScript Metaphors](/collections/javascript/README.md)
-- [Maths Metaphors](/collections/maths/README.md)
-- [PHP Metaphors](/collections/php/README.md)
-- [Physics Metaphors](/collections/physics/README.md)
-- [Ruby Metaphors](/collections/ruby/README.md)
-- [Rust Metaphors](/collections/rust/README.md)
-- [Zig Metaphors](/collections/zig/README.md)
+<p align="center">Every Punk can make any contributions to share your styles and unsual <s>code snippet</s> metaphor that belived it's something <s>wrong</s> different in traditional theory or usual business, but it's work! That our <b>Punk Freestyle Engineer</b>. Welcome to the Street Community Programmer.</p>
+<br><br><br>
 
-## Contributing
-Every Punk can make any contributions to share your styles and unsual ~~code snippet~~ metaphor that belived it's something ~~wrong~~ different in traditional theory or usual business, but it's work! That our **Punk Freestyle Engineer**. Welcome to the Street Community Programmer.
-
-## How to
-- Like & Clone this repository
-- Write your ~~code snippet~~ metaphor in `collections` directory based on your metaphor interest <sup>[[1]](#metaphor-writing-rules)</sup>
-- Add your ~~code snippet~~ metaphor `title` and your github `username` (in the end of line) into `README.md` and sort in A-Z!
-- and make your pull request!
-
-## Metaphor Writing Rules
-- Create your metaphor `filename` using `.md` extension
-- Describe your freestyle with your style
-- Format file in order:
-    - Heading
-    - Subheading (optional)
-    - Descriptions
-    - ~~Code Snippet~~ Metaphor
-    - Your Punk Signature!
-
-## Writting Shortcut
-
-Create issue to [request to add](https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=&labels=add+metaphore&template=metaphore_request.yml&title=Add+%5BMETAPHORE+NAME%5D) your metaphor to our repository. That's it!
+<p align="center">
+    <h2 align="center">Create & Share Your Metaphor Story</h2>
+    <p align="center">Don't ask how to contribute, just share what you want to share!</p>
+    <p align="center"><strong><a href="https://github.com/StreetCommunityProgrammer/metaphore/issues/new/choose">[ Let Me In ]</a></strong></p>
+</p>
 
 ## Notes
 _Every metaphor in this repository is public and everyone can used for free._
