@@ -16,6 +16,11 @@ collections:
     permalink: "/:collection/:path"
     output: true
 
+just_the_docs:
+  collections:
+    metaphors:
+      nav_exclude: true
+
 callouts_level: quiet # or loud
 callouts:
   highlight:
