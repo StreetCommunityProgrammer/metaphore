@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add [Translate Requests Between Stores with Different Selling Units]
+title: Translate Requests Between Stores with Different Selling Units
 author: darkterminal
 created_at: 2023-02-01T07:10:31Z
 language: javascript
