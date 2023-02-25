@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Add [React Table Trigger Changed Without SWR]
+title: React Table Trigger Changed Without SWR
 author: darkterminal
 created_at: 2023-01-26T16:39:15Z
 language: javascript
