@@ -1,0 +1,19 @@
+.post-metadata-highlight {
+    padding: auto 10px;
+    border-radius: 5px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    .post-author-profile-picture {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+}
+
+.normal-anchor {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
