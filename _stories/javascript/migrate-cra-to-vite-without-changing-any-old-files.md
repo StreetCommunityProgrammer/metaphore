@@ -15,7 +15,8 @@ Migrate CRA to Vite Without Changing Any Old Files
 When I need more speed in development phase, I choose Vite to boost my development workflow. But I have old (slow) CRA before.
 
 Here my old CRA Directory Structure
-```
+
+```bash
 whats-my-app/
   README.md
   .env
@@ -118,7 +119,8 @@ export default ({ mode }) => {
 6. Install `vite` as dev dependencies `npm i --save-dev @types/react @types/react-dom @vitejs/plugin-react vite`
 
 Here my new directory structure
-```
+
+```bash
 whats-my-app/
   README.md
   .env
