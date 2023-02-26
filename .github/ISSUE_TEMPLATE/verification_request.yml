@@ -7,7 +7,22 @@ body:
   - type: textarea
     attributes:
       label: Fill information about you
-      description: Describe following format below
-      value: sample format
+      description: Describe following format below and fill all required fields change value to empty in optional fields
+      value: |
+        {start userdata}
+        {
+          "github_username": "your-github-username-required",
+          "public_email": "your-public-email-required",
+          "donation_link": "your-donation-link-required",
+          "social_media": {
+            "devto": "your-devto-link-required",
+            "twitter": "your-twitter-link-required",
+            "reddit": "your-reddit-link-optional",
+            "hashnode": "your-hashnode-link-optional",
+            "mastodon": "your-mastodon-link-optional",
+            "facebook": "your-facebook-link-optional",
+          }
+        }
+        {end userdata}
     validations:
       required: true
