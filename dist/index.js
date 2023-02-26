@@ -16459,7 +16459,7 @@ async function run() {
       case 'closed':
         await storyGenerator(client, context)
         break;
-      case 'open':
+      case 'opened':
         const issueMessage = core.getInput('issue-message');
         const prMessage = core.getInput('pr-message');
         const footer = core.getInput('footer');
