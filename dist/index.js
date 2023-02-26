@@ -16471,6 +16471,7 @@ const storyGenerator = __nccwpck_require__(4395);
         break;
       default:
         console.log('No action, skipping');
+        core.setFailed('No action, skipping!');
         break;
     }
   } catch (error) {

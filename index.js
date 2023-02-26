@@ -23,6 +23,7 @@ const storyGenerator = require('./scripts/storyGenerator');
         break;
       default:
         console.log('No action, skipping');
+        core.setFailed('No action, skipping!');
         break;
     }
   } catch (error) {
