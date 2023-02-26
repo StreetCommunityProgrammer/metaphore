@@ -3,7 +3,7 @@ on:
   push:
     branches: [master]
   issues:
-    types: [opened, reopened]
+    types: [opened]
   issue_comment:
     types: [created]
   pull_request_target:
