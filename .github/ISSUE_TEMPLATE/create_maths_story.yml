@@ -29,5 +29,5 @@ body:
   - type: input
     id: link
     attributes:
-      label: PayPal Link for Donation Button
+      label: PayPal Link for Donation
       placeholder: 'e.g.: https://www.paypal.me/your-paypal-profile-username'

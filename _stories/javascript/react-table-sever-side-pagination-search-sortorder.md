@@ -4,7 +4,6 @@ title: React Table - Sever Side Pagination, Search, Sort/Order
 author: darkterminal
 created_at: 2023-02-17T11:52:52Z
 language: javascript
-paypal_donation: lazarusalhambra
 ---
 
 ### Metaphore Name
