@@ -6,16 +6,28 @@ layout: default
 
 <div class="post-metadata-highlight">
     <img src="https://github.com/{{ page.author }}.png" alt="{{ page.author }}" class="post-author-profile-picture">
-    <span>Author: <a href="https://github.com/{{ page.author }}" target="_blank">{{ page.author }}</a> &mdash; Created At: {{ page.created_at | date: "%Y-%m-%d %H:%M" }} &mdash; Language: <strong>{{ page.language }}</strong></span>
+    <span>Author: <a href="https://github.com/{{ page.author }}" target="_blank">{{ page.author }}</a> &mdash; Created
+        At: {{ page.created_at | date: "%Y-%m-%d %H:%M" }} &mdash; Language: <strong>{{ page.language }}</strong></span>
 </div>
 
 {{ content | markdownify }}
 
-<script src="https://utteranc.es/client.js"
-        repo="streetcommunityprogrammer/metaphore"
-        issue-term="title"
-        label="story::comment 💬"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
+<div class="shareon">
+    <strong>Share this story</strong>
+    <a class="facebook"></a>
+    <a class="linkedin"></a>
+    <a class="mastodon"></a>
+    <a class="odnoklassniki"></a>
+    <a class="pinterest"></a>
+    <a class="pocket"></a>
+    <a class="reddit"></a>
+    <a class="telegram"></a>
+    <a class="twitter"></a>
+    <a class="viber"></a>
+    <a class="vkontakte"></a>
+    <a class="whatsapp"></a>
+</div>
+
+<script src="https://utteranc.es/client.js" repo="streetcommunityprogrammer/metaphore" issue-term="title"
+    label="story::comment 💬" theme="preferred-color-scheme" crossorigin="anonymous" async>
+    </script>
