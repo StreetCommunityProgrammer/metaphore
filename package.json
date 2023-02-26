@@ -4,7 +4,8 @@
   "description": "![Metaphor](metaphor.png) <center> <h1>- Metaphore -</h1> Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members. </center>",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js"
+    "build": "ncc build index.js",
+    "dev": "bundle exec jekyll serve --config _config-dev.yml"
   },
   "repository": {
     "type": "git",
