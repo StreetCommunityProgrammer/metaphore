@@ -1,3 +1,5 @@
+const core = require('@actions/core');
+
 module.exports = async (client, context, issueMessage, prMessage, footer) => {
     try {
         const issue = await client.rest.issues.get({
