@@ -12,8 +12,6 @@ const storyGenerator = require('./scripts/storyGenerator');
     const client = github.getOctokit(githubToken);
     const context = github.context;
 
-    console.log(context.payload.action)
-
     switch (context.payload.action) {
       case 'closed':
         await storyGenerator(client, context)

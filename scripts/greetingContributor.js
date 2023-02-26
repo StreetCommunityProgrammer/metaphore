@@ -17,14 +17,14 @@ module.exports = async (client, context, issueMessage, prMessage, footer) => {
         const footerTags = `<p>${footer}</p>`;
 
         if (!!context.payload.issue) {
-            await client.issues.createComment({
+            await client.rest.issues.createComment({
                 owner: context.issue.owner,
                 repo: context.issue.repo,
                 issue_number: context.issue.number,
                 body: issueMessage + footerTags
             });
         } else {
-            await client.pulls.createReview({
+            await client.rest.pulls.createReview({
                 owner: context.issue.owner,
                 repo: context.issue.repo,
                 pull_number: context.issue.number,
