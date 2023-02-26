@@ -1,0 +1,13 @@
+name: Verification Request
+description: Open proposal to verified me as a Verfied Storytellers
+title: 'Verification Request - YOUR-GITHUB-USERNAME'
+labels: ["verification-request"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+  - type: textarea
+    attributes:
+      label: Fill information about you
+      description: Describe following format below
+      value: sample format
+    validations:
+      required: true
