@@ -6,13 +6,20 @@
   "scripts": {
     "build": "ncc build index.js",
     "dev:install": "npm install && bundle install",
-    "dev": "bundle exec jekyll serve --config _config-dev.yml"
+    "dev": "bundle exec jekyll serve --config _config-dev.yml",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StreetCommunityProgrammer/metaphore.git"
   },
-  "keywords": ["sharing", "blogging", "freestyle", "programming", "metaphor"],
+  "keywords": [
+    "sharing",
+    "blogging",
+    "freestyle",
+    "programming",
+    "metaphor"
+  ],
   "author": "Imam Ali Mustofa <d.darkterminal@gmail.com> (https://bettadevindonesia.com)",
   "license": "GPL-3.0-only",
   "bugs": {
@@ -26,6 +33,7 @@
     "replace-in-file": "^6.3.5"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.1"
+    "@vercel/ncc": "^0.36.1",
+    "husky": "^8.0.3"
   }
 }

@@ -9,7 +9,9 @@ module.exports = async (client, context, issueMessage, prMessage, footer) => {
         })
         const issueData = issue.data
 
-        if (context.payload.action !== 'opened' || issueData.labels.includes('story::comment 💬') === true) {
+        console.log(issueData.labels.includes('story::comment'))
+
+        if (context.payload.action !== 'opened') {
             console.log('No issue / pull request was opened, skipping');
             return;
         }
