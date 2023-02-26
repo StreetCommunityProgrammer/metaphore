@@ -10,7 +10,15 @@ layout: default
         At: {{ page.created_at | date: "%Y-%m-%d %H:%M" }} &mdash; Language: <strong>{{ page.language }}</strong></span>
 </div>
 
-{{ content | markdownify }}
+{{ content }}
+
+{% if page.paypal_donation != nil %}
+<div style="text-align: center;margin: 10px auto;">
+    <a href="https://www.paypal.me/{{ page.paypal_donation }}" target="_blank">
+        <img src="https://img.shields.io/badge/Say%20Thank%20You!-Buy%20{{page.author}}%20a%20Coffee-blue?style=for-the-badge&logo=paypal" alt="Donation Button" />
+    </a>
+</div>
+{% endif %}
 
 <div class="shareon">
     <strong>Share this story</strong>
