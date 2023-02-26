@@ -8,6 +8,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@main
-            - uses: darkterminal/metaphore@main # Uses an action in the root directory
+            - uses: StreetCommunityProgrammer/metaphore@main # Uses an action in the root directory
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
