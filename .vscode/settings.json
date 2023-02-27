@@ -1,0 +1,19 @@
+{
+    "[liquid]": {
+        "editor.quickSuggestions": {
+            "other": "on",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.formatOnSave": false,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "files.associations": {
+        "*.md": "liquid",
+        "*.markdown": "liquid",
+        "*.html": "liquid",
+        "*.liquid": "liquid",
+    },
+}

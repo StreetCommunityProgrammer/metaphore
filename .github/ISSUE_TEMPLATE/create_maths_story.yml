@@ -26,3 +26,8 @@ body:
     attributes:
       label: A demo/repos link
       placeholder: 'e.g.: https://github.com.com/username/my-repos'
+  - type: input
+    id: link
+    attributes:
+      label: PayPal Link for Donation
+      placeholder: 'e.g.: https://www.paypal.me/your-paypal-profile-username'
