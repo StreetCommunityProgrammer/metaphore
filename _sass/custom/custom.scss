@@ -17,3 +17,17 @@
     text-decoration: none;
     font-style: italic;
 }
+
+.shareon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    strong {
+        background-color: transparent;
+        color: black;
+        text-align: left !important;
+        &:hover {
+            cursor: default;
+        }
+    }
+}
