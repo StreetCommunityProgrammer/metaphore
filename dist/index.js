@@ -15876,6 +15876,380 @@ function wrappy (fn, cb) {
 
 /***/ }),
 
+/***/ 6969:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const core = __nccwpck_require__(2186);
+
+module.exports = async (client, context, issueMessage, prMessage, footer) => {
+    try {
+        const issue = await client.rest.issues.get({
+            owner: context.issue.owner,
+            repo: context.issue.repo,
+            issue_number: context.issue.number,
+        })
+        const issueData = issue.data
+        const labels = issueData.labels.map(label => label.name)
+
+        if (context.payload.action !== 'opened' || labels.includes('story::comment') === true) {
+            console.log('No issue / pull request was opened, skipping');
+            return;
+        }
+
+        const footerTags = `<p>${footer}</p>`;
+
+        if (!!context.payload.issue) {
+            await client.rest.issues.createComment({
+                owner: context.issue.owner,
+                repo: context.issue.repo,
+                issue_number: context.issue.number,
+                body: issueMessage + footerTags
+            });
+        } else {
+            await client.rest.pulls.createReview({
+                owner: context.issue.owner,
+                repo: context.issue.repo,
+                pull_number: context.issue.number,
+                body: prMessage + footerTags,
+                event: 'COMMENT'
+            });
+        }
+    } catch (error) {
+        core.setFailed(error.message);
+    }
+}
+
+/***/ }),
+
+/***/ 4395:
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
+
+const { Base64 } = __nccwpck_require__(4139);
+const replace = __nccwpck_require__(5983);
+const { promises: fsPromises } = __nccwpck_require__(7147);
+const slugify = __nccwpck_require__(2293);
+
+module.exports = async (client, context) => {
+  try {
+    const issue = await client.rest.issues.get({
+      owner: context.issue.owner,
+      repo: context.issue.repo,
+      issue_number: context.issue.number,
+    })
+    const issueData = issue.data
+
+    if (issueData.state === 'closed') {
+      const labels = issueData.labels.map(label => label.name)
+
+      // Metaphor Categories
+      const isCssMetaphor = labels.every(label => ['metaphore', 'css'].includes(label))
+      const isJavaScriptMetaphor = labels.every(label => ['metaphore', 'javascript'].includes(label))
+      const isJavaMetaphor = labels.every(label => ['metaphore', 'java'].includes(label))
+      const isMathsMetaphor = labels.every(label => ['metaphore', 'maths'].includes(label))
+      const isPythonMetaphor = labels.every(label => ['metaphore', 'python'].includes(label))
+      const isPhpMetaphor = labels.every(label => ['metaphore', 'php'].includes(label))
+      const isPhysicsMetaphor = labels.every(label => ['metaphore', 'physics'].includes(label))
+      const isRubyMetaphor = labels.every(label => ['metaphore', 'ruby'].includes(label))
+      const isRustMetaphor = labels.every(label => ['metaphore', 'rust'].includes(label))
+      const isZigMetaphor = labels.every(label => ['metaphore', 'zig'].includes(label))
+
+      if (isCssMetaphor) {
+        console.log(`Is css metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'css', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/css/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isJavaScriptMetaphor) {
+        console.log(`Is javascript metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'javascript', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/javascript/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isJavaMetaphor) {
+        console.log(`Is java metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'java', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/java/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isMathsMetaphor) {
+        console.log(`Is maths metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'maths', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/maths/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isPythonMetaphor) {
+        console.log(`Is python metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'python', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/python/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isPhpMetaphor) {
+        console.log(`Is php metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'php', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/php/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isPhysicsMetaphor) {
+        console.log(`Is physics metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'physics', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/physics/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isRubyMetaphor) {
+        console.log(`Is ruby metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'ruby', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/ruby/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isRustMetaphor) {
+        console.log(`Is rust metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'rust', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/rust/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      } else if (isZigMetaphor) {
+        console.log(`Is zig metaphor`)
+        const metaphorTitle = slugify(issueData.title)
+        const result = await replace({
+          files: 'templates/stories.txt',
+          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
+          to: [issueData.title, issueData.user.login, issueData.created_at, 'zig', issueData.body]
+        })
+        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
+        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
+        const metaphorContent = Base64.encode(markdownContent)
+        const createContent = await client.rest.repos.createOrUpdateFileContents({
+          owner: context.issue.owner,
+          repo: context.issue.repo,
+          path: `_stories/zig/${metaphorTitle}.md`,
+          message: `docs(generate): new metaphor from @${issueData.user.login}`,
+          content: metaphorContent,
+          committer: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          },
+          author: {
+            name: 'Imam Ali Mustofa',
+            email: 'd.darkterminal@gmail.com'
+          }
+        })
+        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
+      }
+    }
+  } catch (error) {
+    console.log(`Erorr on storyGenerator: ${error}`)
+    return false
+  }
+}
+
+/***/ }),
+
+/***/ 2293:
+/***/ ((module) => {
+
+module.exports = (text) => {
+    return text
+      .toString()                   // Cast to string (optional)
+      .normalize('NFKD')            // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
+      .toLowerCase()                // Convert the string to lowercase letters
+      .trim()                       // Remove whitespace from both sides of a string (optional)
+      .replace(/\s+/g, '-')         // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')     // Remove all non-word chars
+      .replace(/\-\-+/g, '-')       // Replace multiple - with single -
+      .replace(/\-$/g, '');         // Remove trailing -
+  }
+
+/***/ }),
+
 /***/ 2877:
 /***/ ((module) => {
 
@@ -16075,327 +16449,34 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 const github = __nccwpck_require__(5438);
-const { Base64 } = __nccwpck_require__(4139);
-const replace = __nccwpck_require__(5983);
-const {promises: fsPromises} = __nccwpck_require__(7147);
+const greetingContributor = __nccwpck_require__(6969);
+const storyGenerator = __nccwpck_require__(4395);
 
-function slugify(text) {
-  return text
-    .toString()                   // Cast to string (optional)
-    .normalize('NFKD')            // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
-    .toLowerCase()                // Convert the string to lowercase letters
-    .trim()                       // Remove whitespace from both sides of a string (optional)
-    .replace(/\s+/g, '-')         // Replace spaces with -
-    .replace(/[^\w\-]+/g, '')     // Remove all non-word chars
-    .replace(/\-\-+/g, '-')       // Replace multiple - with single -
-    .replace(/\-$/g, '');         // Remove trailing -
-}
-
-async function run() {
+(async () => {
   try {
     const githubToken = core.getInput('github-token', { required: true });
+    const issueMessage = core.getInput('issue-message');
+    const prMessage = core.getInput('pr-message');
+    const footer = core.getInput('footer');
     const client = github.getOctokit(githubToken);
     const context = github.context;
 
-    const issue = await client.rest.issues.get({
-      owner: context.issue.owner,
-      repo: context.issue.repo,
-      issue_number: context.issue.number,
-    })
-    const issueData = issue.data
-
-    if (issueData.state === 'closed') {
-      const labels = issueData.labels.map(label => label.name)
-
-      // Metaphor Categories
-      const isCssMetaphor = labels.every(label => ['metaphore', 'css'].includes(label))
-      const isJavaScriptMetaphor = labels.every(label => ['metaphore', 'javascript'].includes(label))
-      const isJavaMetaphor = labels.every(label => ['metaphore', 'java'].includes(label))
-      const isMathsMetaphor = labels.every(label => ['metaphore', 'maths'].includes(label))
-      const isPythonMetaphor = labels.every(label => ['metaphore', 'python'].includes(label))
-      const isPhpMetaphor = labels.every(label => ['metaphore', 'php'].includes(label))
-      const isPhysicsMetaphor = labels.every(label => ['metaphore', 'physics'].includes(label))
-      const isRubyMetaphor = labels.every(label => ['metaphore', 'ruby'].includes(label))
-      const isRustMetaphor = labels.every(label => ['metaphore', 'rust'].includes(label))
-      const isZigMetaphor = labels.every(label => ['metaphore', 'zig'].includes(label))
-
-      if (isCssMetaphor) {
-        console.log(`Is css metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'css', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/css/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isJavaScriptMetaphor) {
-        console.log(`Is javascript metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'javascript', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/javascript/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isJavaMetaphor) {
-        console.log(`Is java metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'java', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/java/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isMathsMetaphor) {
-        console.log(`Is maths metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'maths', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/maths/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isPythonMetaphor) {
-        console.log(`Is python metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'python', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/python/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isPhpMetaphor) {
-        console.log(`Is php metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'php', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/php/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isPhysicsMetaphor) {
-        console.log(`Is physics metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'physics', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/physics/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isRubyMetaphor) {
-        console.log(`Is ruby metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'ruby', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/ruby/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isRustMetaphor) {
-        console.log(`Is rust metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'rust', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/rust/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      } else if (isZigMetaphor) {
-        console.log(`Is zig metaphor`)
-        const metaphorTitle = slugify(issueData.title)
-        const result = await replace({
-          files: 'templates/stories.txt',
-          from: ['{title}', '{author}', '{created_at}', '{language}', '{content}'],
-          to: [issueData.title, issue.data.user.login, issue.data.created_at, 'zig', issueData.body]
-        })
-        console.log('Replacement result: ' + JSON.stringify(result, undefined, 2))
-        const markdownContent = await fsPromises.readFile('templates/stories.txt', 'utf-8')
-        const metaphorContent = Base64.encode(markdownContent)
-        const createContent = await client.rest.repos.createOrUpdateFileContents({
-          owner: context.issue.owner,
-          repo: context.issue.repo,
-          path: `_stories/zig/${metaphorTitle}.md`,
-          message: `docs(generate): new metaphor from @${issue.data.user.login}`,
-          content: metaphorContent,
-          committer: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          },
-          author: {
-            name: 'Imam Ali Mustofa',
-            email: 'd.darkterminal@gmail.com'
-          }
-        })
-        console.log(`Content Metadata: ${JSON.stringify(createContent, undefined, 2)}`)
-      }
+    switch (context.payload.action) {
+      case 'closed':
+        await storyGenerator(client, context)
+        break;
+      case 'opened':
+        await greetingContributor(client, context, issueMessage, prMessage, footer)
+        break;
+      default:
+        console.log('No action, skipping');
+        core.setFailed('No action, skipping!');
+        break;
     }
   } catch (error) {
     core.setFailed(error.message);
   }
-}
-run()
+})()
 })();
 
 module.exports = __webpack_exports__;
