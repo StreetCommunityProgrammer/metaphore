@@ -31,3 +31,11 @@
         }
     }
 }
+
+.rounded {
+    border-radius: 50%;
+}
+.gap { row-gap: 5px; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.align-center { align-items: center; }

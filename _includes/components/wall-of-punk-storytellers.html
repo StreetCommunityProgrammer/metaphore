@@ -1,0 +1,35 @@
+{% assign totalPosts = '' | split: ',' %}
+{% assign authors = '' | split: ',' %}
+{% for story in site.stories %}
+    {% assign total = site.stories | where: 'author', story.author | size %}
+    {% assign totalPosts = totalPosts | push: total %}
+    {% assign authors = authors | push: story.author %}
+{% endfor %}
+
+{% assign uniqAuthors = authors | uniq | reverse %}
+{% assign uniqPostTotal = totalPosts | uniq | reverse %}
+
+<div class="d-flex">
+    {% for total in uniqPostTotal %}
+    <div class="mr-3 p-2 mb-2" style="width: 10rem;">
+        <div class="d-flex flex-col align-center">
+            <img src="https://github.com/{{ uniqAuthors[forloop.index0] }}.png" width="50" height="50" alt="{{ uniqAuthors[forloop.index0] }}" class="rounded mr-2" />
+            <div class="d-flex flex-col">
+                <span class="text-center">{{ uniqAuthors[forloop.index0] }}</span>
+                <span class="label label-red text-center">Total Stories: {{ total }}</span>
+                {% if total < 10 %}
+                <span class="text-center fs-2 fw-500">Level: <span class="text-red-000">Kid</span></span>
+                {% else if total >= 10 %}
+                <span class="text-center fs-2 fw-500">Level: <span class="text-red-000">Teenage</span></span>
+                {% else if total >= 20 %}
+                <span class="text-center fs-2 fw-500">Level: <span class="text-red-000">Adult</span></span>
+                {% else if total >= 30 %}
+                <span class="text-center fs-2 fw-500">Level: <span class="text-red-000">Parent</span></span>
+                {% else if total > 50 %}
+                <span class="text-center fs-2 fw-500">Level: <span class="text-red-000">Grand</span> Parent</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
