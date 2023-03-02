@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Story as Code. Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members."
+description: "Story as Code: Public Collections of Metaphors from our Freestylers around the World. Gain Unique Perspectives from Our Punk Members."
 permalink: /
 ---
 
@@ -28,13 +28,13 @@ Story as Code. Public Collections of Metaphor our Freestylers accross the world.
 Hello Punk! We are street programmer that work out of the box in everyway of traditional theory and we're not calling snippet of code but called as Metaphor.
 {: .text-center }
 
-Basically programming language is a bridge to communicate with other people in the world without speak in their national language, we can collaborate each other without knowing our national language.
+Programming languages are essentially bridges for communicating with people around the world without knowing their native language. We can collaborate with each other despite not sharing a common language.
 {: .text-center }
 
-We called our member Punk/Freestyler/Software Freestyle Engineer that create some Metaphor to make this world more better.
+Our members are called Punks, Freestylers, and Software Freestyle Engineers, who create metaphors to make the world a better place.
 {: .text-center }
 
-Every Punk can make any contributions to share your styles and unsual ~~code snippet~~ metaphor that belived it's something wrong different in traditional theory or usual business, but it's work! That our Punk Freestyle Engineer. Welcome to the Street Community Programmer.
+Every Punk can contribute their own unique style and unusual ~~code snippets~~ metaphor that challenge traditional theory or conventional business practics. But, it work! That's what being a Punk Freestyle Engineer is all about. Welcome to the Street Community Programmer.
 {: .text-center }
 
 ## Create & Share Your Metaphor Story
@@ -47,7 +47,7 @@ Don't ask how to contribute, just share what you want to share!
   <a href="https://github.com/StreetCommunityProgrammer/metaphore/issues/new/choose" target="_blank" class="btn btn-blue">Let Me In!</a>
 </p>
 
-#### Thank you to the Our Punk Members!
+#### Thank you to our Punk Members!
 {: .text-center }
 
 <ul class="list-style-none">
