@@ -34,7 +34,7 @@ Programming languages are essentially bridges for communicating with people arou
 Our members are called Punks, Freestylers, and Software Freestyle Engineers, who create metaphors to make the world a better place.
 {: .text-center }
 
-Every Punk can contribute their own unique style and unusual code snippets that challenge traditional theory or conventional business practics. But, it work! That's what being a Punk Freestyle Engineer is all about. Welcome to the Street Community Programmer.
+Every Punk can contribute their own unique style and unusual ~~ccode snippets~~ metaphor that challenge traditional theory or conventional business practics. But, it work! That's what being a Punk Freestyle Engineer is all about. Welcome to the Street Community Programmer.
 {: .text-center }
 
 ## Create & Share Your Metaphor Story
