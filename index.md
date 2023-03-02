@@ -47,7 +47,7 @@ Don't ask how to contribute, just share what you want to share!
   <a href="https://github.com/StreetCommunityProgrammer/metaphore/issues/new/choose" target="_blank" class="btn btn-blue">Let Me In!</a>
 </p>
 
-#### Thank you to the Our Punk Members!
+#### Thank you to our Punk Members!
 {: .text-center }
 
 <ul class="list-style-none">
