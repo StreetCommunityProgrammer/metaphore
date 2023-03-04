@@ -9,12 +9,6 @@ export default ({ mode }) => {
 
     return defineConfig({
         base: '/metaphore/',
-        build: {
-            outDir: 'build',
-        },
-        server: {
-            port: process.env.VITE_PORT,
-        },
         esbuild: {
             loader: 'jsx',
             include: /src\/.*\.jsx?$/,
