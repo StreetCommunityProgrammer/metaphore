@@ -8,7 +8,6 @@ export default ({ mode }) => {
     process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''))
 
     return defineConfig({
-        base: '/metaphore/',
         esbuild: {
             loader: 'jsx',
             include: /src\/.*\.jsx?$/,
@@ -38,6 +37,7 @@ export default ({ mode }) => {
             },
         },
         plugins: [react()],
+        base: '/metaphore/',
         define: {
             'import.meta.env.APP_VERSION': JSON.stringify(packageJson.version),
         },

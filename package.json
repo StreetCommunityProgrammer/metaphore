@@ -24,7 +24,7 @@
   "bugs": {
     "url": "https://github.com/StreetCommunityProgrammer/metaphore/issues"
   },
-  "homepage": "https://darkterminal.github.io/metaphore/",
+  "homepage": "https://github.com/StreetCommunityProgrammer/metaphore#README.md",
   "dependencies": {
     "@primer/octicons-react": "^18.0.0",
     "@primer/react": "^35.20.0",
