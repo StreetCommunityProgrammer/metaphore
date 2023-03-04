@@ -18,13 +18,11 @@ function SidebarMenu() {
             </Heading>
             <NavList>
                 {sidebar.map((route, index) => (
-                    <NavList.Item href='#' key={index}>
-                        <Link to={route.path}>
-                            <NavList.LeadingVisual>
-                                <CodeReviewIcon />
-                            </NavList.LeadingVisual>
-                            <span className='font-bold text-slate-900'>{route.title}</span>
-                        </Link>
+                    <NavList.Item as={Link} to={route.path} key={index}>
+                        <NavList.LeadingVisual>
+                            <CodeReviewIcon />
+                        </NavList.LeadingVisual>
+                        <span className='font-bold text-slate-900'>{route.title}</span>
                     </NavList.Item>
                 ))}
             </NavList>
