@@ -8,6 +8,7 @@ export default ({ mode }) => {
     process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''))
 
     return defineConfig({
+        base: '/metaphore/',
         build: {
             outDir: 'build',
         },
