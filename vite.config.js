@@ -37,7 +37,7 @@ export default ({ mode }) => {
             },
         },
         plugins: [react()],
-        base: '/metaphore/',
+        base: './',
         define: {
             'import.meta.env.APP_VERSION': JSON.stringify(packageJson.version),
         },
