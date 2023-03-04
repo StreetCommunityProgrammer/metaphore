@@ -1,26 +1,10 @@
-import { Octokit } from "https://cdn.skypack.dev/@octokit/rest"
+import axios from 'axios'
 
 export const getAllContributors = async () => {
     try {
-        const owner = 'darkterminal'
-        const repo = 'metaphore'
-
-        const octokit = new Octokit({
-            auth: "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"
-        })
-
-        const contributors = await octokit.request(`GET /repos/${owner}/${repo}/contributors`, {
-            owner,
-            repo
-        })
-
-        const contents = await octokit.request(`GET /repos/${owner}/${repo}/contents/collections/stories?ref=scp-react`, {
-            owner,
-            repo,
-            path: '/collections/stories'
-        })
-        console.log(contents)
-        return contributors.data
+        const request = await axios.get('/contributors')
+        const response = request.data
+        return response.data
     } catch (error) {
         console.log(`Error on getAllContributors: ${error}`)
         return 0

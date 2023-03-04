@@ -11,7 +11,7 @@ function NavigationMenu() {
     useEffect(() => {
         const contributors = async () => {
             const data = await getAllContributors()
-            setTotalContributors(data.length)
+            setTotalContributors(data.total_contributors)
         }
         contributors()
     }, [])
