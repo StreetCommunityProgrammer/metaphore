@@ -1,21 +1,12 @@
 import { GitBranchIcon, MarkGithubIcon, PeopleIcon, TagIcon } from '@primer/octicons-react'
 import { CounterLabel, Header, StyledOcticon } from '@primer/react'
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { menu } from '../routes/menu'
-import { getAllContributors } from '../services/ConstributorService'
+import { AppContext } from '../context/AppContext'
 
 function NavigationMenu() {
-    const [totalContributors, setTotalContributors] = useState(0)
-
-    useEffect(() => {
-        const contributors = async () => {
-            const data = await getAllContributors()
-            setTotalContributors(data.total_contributors)
-        }
-        contributors()
-    }, [])
-
+    const app = useContext(AppContext)
     return (
         <Header>
             <Header.Item>
@@ -44,7 +35,7 @@ function NavigationMenu() {
             <Header.Item>
                 <Link className='font-bold text-white hover:text-zinc-300'>
                     <StyledOcticon icon={PeopleIcon} size={16} sx={{ mr: 2 }} />
-                    <span><CounterLabel>{totalContributors}</CounterLabel> Contributors</span>
+                    <span><CounterLabel>{app.totalContributors}</CounterLabel> Punk Members</span>
                 </Link>
             </Header.Item>
             <Header.Item>

@@ -1,8 +1,12 @@
-import { Pagehead } from '@primer/react'
-import React, { Fragment } from 'react'
+import { Avatar, Box, Button, Pagehead } from '@primer/react'
+import React, { Fragment, useContext } from 'react'
 import metaphorBanner from '../assets/metaphor.png'
+import { SignInIcon } from '@primer/octicons-react'
+import { Link } from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
 
 function Home() {
+    const app = useContext(AppContext)
     return (
         <Fragment>
             <Pagehead>
@@ -18,7 +22,7 @@ function Home() {
                 <img src={metaphorBanner} alt="Metaphor" className='w-full mb-2' />
             </Pagehead>
             <div className="prose max-w-none">
-                <h3 className='prose-h1'>Prologue</h3>
+                <h3 className='prose-h3'>Prologue</h3>
 
                 <p><span className='text-4xl'>H</span>ello Punk! We are street programmer that work out of the box in everyway of traditional theory and we're not calling snippet of code but called as Metaphor.</p>
 
@@ -26,7 +30,23 @@ function Home() {
 
                 <p>Our members are called Punks, Freestylers, and Software Freestyle Engineers, who create metaphors to make the world a better place.</p>
 
-                <p>Every Punk can contribute their own unique style and unusual code snippets metaphor that challenge traditional theory or conventional business practics. But, it work! That’s what being a Punk Freestyle Engineer is all about. Welcome to the Street Community Programmer.</p>
+                <p>Every Punk can contribute their own unique style and unusual code snippets metaphor that challenge traditional theory or conventional business practics. But, it work! That's what being a Punk Freestyle Engineer is all about. Welcome to the Street Community Programmer.</p>
+
+                <h3 className='prose-h3'>Create & Share Your Metaphor Story</h3>
+                <blockquote className='inline-flex gap-3'>
+                    <span>Don't ask how to contribute, just share what you want to share!</span>
+                    <Button leadingIcon={SignInIcon}>Let Me In</Button>
+                </blockquote>
+                <h3 className="prose-h3 font-light">Thank you to our Punk Members!</h3>
+                <Box className='flex align-middle gap-3'>
+                    {app.contributors.map((punk, index) => (
+                        <Box key={index}>
+                            <Link to={punk.html_url} target='_blank' title={punk.username}>
+                                <Avatar square src={`https://avatars.githubusercontent.com/${punk.username}`} size={50} alt={punk.username} />
+                            </Link>
+                        </Box>
+                    ))}
+                </Box>
             </div>
         </Fragment>
     )

@@ -4,39 +4,42 @@ import { Outlet } from 'react-router-dom'
 import NavigationMenu from '../components/NavigationMenu'
 import SidebarMenu from '../components/SidebarMenu'
 import Footer from '../components/Footer'
+import { AppProvider } from '../context/AppContext'
 
 function BaseLayout() {
     return (
-        <Box
-            sx={{
-                display: 'grid',
-                gridTemplateRows: 'auto 1fr auto',
-                height: '100vh'
-            }}
-        >
-            <NavigationMenu />
+        <AppProvider>
             <Box
                 sx={{
-                    overflow: 'auto'
+                    display: 'grid',
+                    gridTemplateRows: 'auto 1fr auto',
+                    height: '100vh'
                 }}
             >
-                <PageLayout
-                    columnGap="none"
-                    containerWidth="full"
-                    padding="none"
-                    rowGap="none"
+                <NavigationMenu />
+                <Box
+                    sx={{
+                        overflow: 'auto'
+                    }}
                 >
-                    <PageLayout.Content
-                        padding="normal"
-                        width="large"
+                    <PageLayout
+                        columnGap="none"
+                        containerWidth="full"
+                        padding="none"
+                        rowGap="none"
                     >
-                        <Outlet />
-                    </PageLayout.Content>
-                    <SidebarMenu />
-                    <Footer />
-                </PageLayout>
+                        <PageLayout.Content
+                            padding="normal"
+                            width="large"
+                        >
+                            <Outlet />
+                        </PageLayout.Content>
+                        <SidebarMenu />
+                        <Footer />
+                    </PageLayout>
+                </Box>
             </Box>
-        </Box>
+        </AppProvider>
     )
 }
 
