@@ -37,7 +37,6 @@ export default ({ mode }) => {
             },
         },
         plugins: [react()],
-        base: './',
         define: {
             'import.meta.env.APP_VERSION': JSON.stringify(packageJson.version),
         },
