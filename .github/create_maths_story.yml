@@ -1,0 +1,33 @@
+name: Create Maths Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "maths"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: maths-title
+      attributes:
+          label: The Back Story about your Maths Metaphor
+          placeholder: "hint: describe the back story about your maths metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: maths-content
+      attributes:
+          label: The maths Story!
+          placeholder: "hint: This is about how a write my maths story"
+      validations:
+          required: true
+    - type: input
+      id: maths-link
+      attributes:
+          label: A Maths demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: maths-donation-link
+      attributes:
+          label: PayPal Link for Donation (Maths Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

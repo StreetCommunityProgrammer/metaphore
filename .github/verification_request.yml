@@ -1,0 +1,28 @@
+name: Verification Request
+description: Open proposal to verifiy me as a Verified Storytellers
+title: 'Verification Request - YOUR-GITHUB-USERNAME'
+labels: ["verification-request"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+  - type: textarea
+    attributes:
+      label: Fill information about you
+      description: Describe following format below and fill all required fields change value to empty in optional fields
+      value: |
+        {start userdata}
+        {
+          "github_username": "change-to-your-github-username-required",
+          "public_email": "change-to-your-public-email-required",
+          "donation_link": "change-to-your-donation-link-required",
+          "social_media": {
+            "devto": "change-to-your-devto-link-required",
+            "twitter": "change-to-your-twitter-link-required",
+            "reddit": "change-to-your-reddit-link-optional",
+            "hashnode": "change-to-your-hashnode-link-optional",
+            "mastodon": "change-to-your-mastodon-link-optional",
+            "facebook": "change-to-your-facebook-link-optional",
+          }
+        }
+        {end userdata}
+    validations:
+      required: true

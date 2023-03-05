@@ -1,0 +1,33 @@
+name: Create Rust Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "rust"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: rust-title
+      attributes:
+          label: The Back Story about your Rust Metaphor
+          placeholder: "hint: describe the back story about your rust metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: rust-content
+      attributes:
+          label: The rust Story!
+          placeholder: "hint: This is about how a write my rust story"
+      validations:
+          required: true
+    - type: input
+      id: rust-link
+      attributes:
+          label: A Rust demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: rust-donation-link
+      attributes:
+          label: PayPal Link for Donation (Rust Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

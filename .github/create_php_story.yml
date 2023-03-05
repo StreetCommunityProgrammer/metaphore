@@ -1,0 +1,33 @@
+name: Create PHP Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "php"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: php-title
+      attributes:
+          label: The Back Story about your PHP Metaphor
+          placeholder: "hint: describe the back story about your php metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: php-content
+      attributes:
+          label: The PHP Story!
+          placeholder: "hint: This is about how a write my php story"
+      validations:
+          required: true
+    - type: input
+      id: php-link
+      attributes:
+          label: A PHP demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: php-donation-link
+      attributes:
+          label: PayPal Link for Donation (PHP Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

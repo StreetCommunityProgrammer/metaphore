@@ -1,0 +1,33 @@
+name: Create Python Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "python"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: python-title
+      attributes:
+          label: The Back Story about your Python Metaphor
+          placeholder: "hint: describe the back story about your python metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: python-content
+      attributes:
+          label: The python Story!
+          placeholder: "hint: This is about how a write my python story"
+      validations:
+          required: true
+    - type: input
+      id: python-link
+      attributes:
+          label: A Python demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: python-donation-link
+      attributes:
+          label: PayPal Link for Donation (Python Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"
