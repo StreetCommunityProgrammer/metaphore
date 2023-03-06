@@ -2,7 +2,6 @@ import { Avatar, Box, Breadcrumbs } from '@primer/react'
 import React from 'react'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import { Link, useLocation, useParams } from 'react-router-dom'
-import Balancer from 'react-wrap-balancer'
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism'
@@ -38,7 +37,7 @@ function SingleStory() {
                 <meta property="twitter:description" content={`Metaphor story from ${location.state.author} about ${location.state.title}`} />
                 <meta property="twitter:image" content={bannerImage} />
             </Helmet>
-            <h1 className='font-medium text-4xl'><Balancer>{location.state.title}</Balancer></h1>
+            <h1 className='font-medium text-4xl'>{location.state.title}</h1>
             <Breadcrumbs>
                 <Breadcrumbs.Item as={Link} to="/">Home</Breadcrumbs.Item>
                 <Breadcrumbs.Item as={Link} to="/javascript">Javascript Metaphors</Breadcrumbs.Item>
