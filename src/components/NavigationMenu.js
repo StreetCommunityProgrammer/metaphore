@@ -33,19 +33,19 @@ function NavigationMenu() {
                 }
             })}
             <Header.Item>
-                <Link className='font-bold text-white hover:text-zinc-300'>
+                <Link className='font-bold text-white hover:text-zinc-300' to='https://github.com/StreetCommunityProgrammer/metaphore/graphs/contributors' target='_blank'>
                     <StyledOcticon icon={PeopleIcon} size={16} sx={{ mr: 2 }} />
                     <span><CounterLabel>{app.totalContributors}</CounterLabel> Punk Members</span>
                 </Link>
             </Header.Item>
             <Header.Item>
-                <Link className='font-bold text-white hover:text-zinc-300'>
+                <Link className='font-bold text-white hover:text-zinc-300' to='https://github.com/StreetCommunityProgrammer/metaphore/fork' target='_blank'>
                     <StyledOcticon icon={GitBranchIcon} size={16} sx={{ mr: 2 }} />
                     <span>Contribute</span>
                 </Link>
             </Header.Item>
             <Header.Item mr={0}>
-                <Link className='font-bold text-white hover:text-zinc-300'>
+                <Link className='font-bold text-white hover:text-zinc-300' to='https://github.com/StreetCommunityProgrammer/metaphore' target='_blank'>
                     <StyledOcticon icon={TagIcon} size={16} sx={{ mr: 2 }} />
                     <span>v{import.meta.env.APP_VERSION}</span>
                 </Link>
