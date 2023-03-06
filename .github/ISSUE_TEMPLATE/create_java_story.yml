@@ -1,33 +1,33 @@
 name: Create Java Story
 description: Add this story to the list
-title: 'Your Story Title'
+title: "Your Story Title"
 labels: ["metaphore", "java"]
 assignees: ["darkterminal", "mkubdev"]
 body:
-  - type: markdown
-    attributes:
-      value: '**Share the current and relevant details**'
-  - type: input
-    id: title
-    attributes:
-      label: The Back Story about this Metaphor
-      placeholder: 'e.g.: When I build POS Web Based I need...'
-    validations:
-      required: true
-  - type: textarea
-    id: content
-    attributes:
-      label: Metaphore story!
-      placeholder: 'To build this automation, i used the websocket library...'
-    validations:
-      required: true
-  - type: input
-    id: link
-    attributes:
-      label: A demo/repos link
-      placeholder: 'e.g.: https://github.com.com/username/my-repos'
-  - type: input
-    id: link
-    attributes:
-      label: PayPal Link for Donation
-      placeholder: 'e.g.: https://www.paypal.me/your-paypal-profile-username'
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: java-title
+      attributes:
+          label: The Back Story about your Java Metaphor
+          placeholder: "hint: describe the back story about your java metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: java-content
+      attributes:
+          label: The java Story!
+          placeholder: "hint: This is about how a write my java story"
+      validations:
+          required: true
+    - type: input
+      id: java-link
+      attributes:
+          label: A Java demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: java-donation-link
+      attributes:
+          label: PayPal Link for Donation (Java Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

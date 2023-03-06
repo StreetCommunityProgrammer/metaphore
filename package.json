@@ -4,10 +4,9 @@
   "description": "Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js",
-    "dev:install": "npm install && bundle install",
-    "dev": "bundle exec jekyll serve --config _config-dev.yml",
-    "prepare": "husky install"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -27,13 +26,31 @@
   },
   "homepage": "https://github.com/StreetCommunityProgrammer/metaphore#readme",
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1",
-    "js-base64": "^3.7.5",
-    "replace-in-file": "^6.3.5"
+    "@primer/octicons-react": "^18.0.0",
+    "@primer/react": "^35.20.0",
+    "axios": "^1.3.4",
+    "date-fns": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-is": "^18.2.0",
+    "react-markdown": "^8.0.5",
+    "react-router-dom": "^6.8.2",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-use": "^17.4.0",
+    "remark-gfm": "^3.0.1",
+    "styled-components": "^5.3.8",
+    "swr": "^2.0.4"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.36.1",
-    "husky": "^8.0.3"
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.13",
+    "commitizen": "^4.3.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.6",
+    "vite": "^4.1.1"
   }
 }

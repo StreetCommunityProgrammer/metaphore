@@ -1,33 +1,33 @@
 name: Create Javascript Story
 description: Add this story to the list
-title: 'Your Story Title'
+title: "Your Story Title"
 labels: ["metaphore", "javascript"]
 assignees: ["darkterminal", "mkubdev"]
 body:
-  - type: markdown
-    attributes:
-      value: '**Share the current and relevant details**'
-  - type: input
-    id: title
-    attributes:
-      label: The Back Story about this Metaphor
-      placeholder: 'e.g.: When I build POS Web Based I need...'
-    validations:
-      required: true
-  - type: textarea
-    id: content
-    attributes:
-      label: Metaphore story!
-      placeholder: 'To build this automation, i used the websocket library...'
-    validations:
-      required: true
-  - type: input
-    id: link
-    attributes:
-      label: A demo/repos link
-      placeholder: 'e.g.: https://github.com.com/username/my-repos'
-  - type: input
-    id: link
-    attributes:
-      label: PayPal Link for Donation
-      placeholder: 'e.g.: https://www.paypal.me/your-paypal-profile-username'
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: input
+      id: javascript-title
+      attributes:
+          label: The Back Story about your Javascript Metaphor
+          placeholder: "hint: describe the back story about your javascript metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: javascript-content
+      attributes:
+          label: The javascript Story!
+          placeholder: "hint: This is about how a write my javascript story"
+      validations:
+          required: true
+    - type: input
+      id: javascript-link
+      attributes:
+          label: A Javascript demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: javascript-donation-link
+      attributes:
+          label: PayPal Link for Donation (Javascript Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

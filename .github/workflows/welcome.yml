@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: StreetCommunityProgrammer/metaphore@main
+      - uses: StreetCommunityProgrammer/action-collections/metaphor-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: "<h1>Hello Punk! It's great having you contribute to this project</h1> Welcome to the community :neckbeard:"

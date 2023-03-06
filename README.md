@@ -1,4 +1,5 @@
-![Metaphor](metaphor.png)
+![Metaphor](public/metaphor.png)
+
 <p align="center">
     <h1 align="center">Metaphore</h1>
     <p align="center">Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.
@@ -17,4 +18,5 @@
 </p>
 
 ## Notes
+
 _Every metaphor in this repository is public and everyone can used for free._
