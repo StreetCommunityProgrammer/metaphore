@@ -1,13 +1,13 @@
 {
-  "github_username": "darkterminal",
-  "public_email": "d.darkterminal@gmail.com",
-  "donation_link": "https://www.paypal.me/lazarusalhambra",
-  "social_media": {
-    "devto": "https://dev.to/darkterminal",
-    "twitter": "https://twitter.com/panggilmeiam",
-    "reddit": null,
-    "hashnode": null,
-    "mastodon": null,
-    "facebook": null
-  }
+	"github_username": "darkterminal",
+	"public_email": "d.darkterminal@gmail.com",
+	"donation_link": "https://www.paypal.me/lazarusalhambra",
+	"social_media": {
+		"devto": "https://dev.to/darkterminal",
+		"twitter": "https://twitter.com/panggilmeiam",
+		"reddit": null,
+		"hashnode": null,
+		"mastodon": null,
+		"facebook": null
+	}
 }

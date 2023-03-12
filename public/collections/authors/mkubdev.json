@@ -1,13 +1,13 @@
 {
-  "github_username": "mkubdev",
-  "public_email": "Mkubdev@gmail.com",
-  "donation_link": "https://github.com/sponsors/mkubdev",
-  "social_media": {
-    "devto": "https://dev.to/mkubdev",
-    "twitter": "https://twitter.com/mkubdev",
-    "reddit": null,
-    "hashnode": null,
-    "mastodon": null,
-    "facebook": null
-  }
+	"github_username": "mkubdev",
+	"public_email": "Mkubdev@gmail.com",
+	"donation_link": "https://github.com/sponsors/mkubdev",
+	"social_media": {
+		"devto": "https://dev.to/mkubdev",
+		"twitter": "https://twitter.com/mkubdev",
+		"reddit": null,
+		"hashnode": null,
+		"mastodon": null,
+		"facebook": null
+	}
 }

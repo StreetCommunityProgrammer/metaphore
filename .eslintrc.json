@@ -1,7 +1,7 @@
 {
-  "extends": ["next/core-web-vitals", "next", "prettier"],
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "react/no-children-prop": "off"
-  }
+	"extends": ["next/core-web-vitals", "next", "prettier"],
+	"rules": {
+		"react/no-unescaped-entities": "off",
+		"react/no-children-prop": "off"
+	}
 }

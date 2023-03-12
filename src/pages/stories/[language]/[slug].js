@@ -10,85 +10,85 @@ import Giscus from '@giscus/react';
 import { GISCUS } from '@/constants/giscus-config';
 
 export async function getStaticPaths() {
-  const posts = getAllStories(`public/collections/stories`);
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug, language: post.frontmatter.language },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
+	const posts = getAllStories(`public/collections/stories`);
+	const paths = posts.map((post) => ({
+		params: { slug: post.slug, language: post.frontmatter.language },
+	}));
+	return {
+		paths,
+		fallback: false,
+	};
 }
 
 export async function getStaticProps(context) {
-  const { language, slug } = context.params;
-  const storyDetail = getSingleStory(slug, language);
+	const { language, slug } = context.params;
+	const storyDetail = getSingleStory(slug, language);
 
-  return {
-    props: {
-      data: storyDetail,
-    },
-  };
+	return {
+		props: {
+			data: storyDetail,
+		},
+	};
 }
 
 export default function TheStory({ data }) {
-  return (
-    <>
-      <Meta title={`Metaphor Story - ${data.frontmatter.title}`} />
-      <article>
-        <StoryHeader
-          title={data.frontmatter.title}
-          author={data.frontmatter.author}
-          language={data.frontmatter.language}
-          createdAt={data.frontmatter.created_at}
-        />
-        <div className="markdownHtml w-9/12 mx-auto my-10">
-          <ReactMarkdown
-            children={data.content}
-            remarkPlugins={[remarkGfm]}
-            className={styles.markdownHtml}
-            components={{
-              code({ node, inline, className, children, ...props }) {
-                const match = /language-(\w+)/.exec(className || '');
-                return !inline && match ? (
-                  <SyntaxHighlighter
-                    children={String(children).replace(/\n$/, '')}
-                    style={nightOwl}
-                    language={match[1]}
-                    PreTag="pre"
-                    CodeTag="code"
-                    showLineNumbers={true}
-                    className="mockup-code"
-                    {...props}
-                  />
-                ) : (
-                  <code
-                    className={`${className} bg-slate-900 text-gray-300 p-1 rounded font-semibold text-xs font-mono`}
-                    {...props}
-                  >
-                    {children}
-                  </code>
-                );
-              },
-            }}
-          />
-          <Giscus
-            id="commets"
-            repo={GISCUS.repo}
-            repoId={GISCUS.repoId}
-            category={GISCUS.category}
-            categoryId={GISCUS.categoryId}
-            mapping="title"
-            strict="1"
-            reactions-enabled="1"
-            emit-metadata="0"
-            input-position="top"
-            theme="preferred_color_scheme"
-            lang="en"
-            loading="lazy"
-          />
-        </div>
-      </article>
-    </>
-  );
+	return (
+		<>
+			<Meta title={`Metaphor Story - ${data.frontmatter.title}`} />
+			<article>
+				<StoryHeader
+					title={data.frontmatter.title}
+					author={data.frontmatter.author}
+					language={data.frontmatter.language}
+					createdAt={data.frontmatter.created_at}
+				/>
+				<div className="markdownHtml w-9/12 mx-auto my-10">
+					<ReactMarkdown
+						children={data.content}
+						remarkPlugins={[remarkGfm]}
+						className={styles.markdownHtml}
+						components={{
+							code({ node, inline, className, children, ...props }) {
+								const match = /language-(\w+)/.exec(className || '');
+								return !inline && match ? (
+									<SyntaxHighlighter
+										children={String(children).replace(/\n$/, '')}
+										style={nightOwl}
+										language={match[1]}
+										PreTag="pre"
+										CodeTag="code"
+										showLineNumbers={true}
+										className="mockup-code"
+										{...props}
+									/>
+								) : (
+									<code
+										className={`${className} bg-slate-900 text-gray-300 p-1 rounded font-semibold text-xs font-mono`}
+										{...props}
+									>
+										{children}
+									</code>
+								);
+							},
+						}}
+					/>
+					<Giscus
+						id="commets"
+						repo={GISCUS.repo}
+						repoId={GISCUS.repoId}
+						category={GISCUS.category}
+						categoryId={GISCUS.categoryId}
+						mapping="title"
+						strict="1"
+						reactions-enabled="1"
+						emit-metadata="0"
+						input-position="top"
+						theme="preferred_color_scheme"
+						lang="en"
+						loading="lazy"
+					/>
+				</div>
+			</article>
+		</>
+	);
 }
