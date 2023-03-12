@@ -1,0 +1,36 @@
+.markdownHtml {
+  box-sizing: border-box;
+}
+.markdownHtml > h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml > h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml > h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml > h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml > h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml > h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+.markdownHtml p {
+  line-height: 1.9em;
+}

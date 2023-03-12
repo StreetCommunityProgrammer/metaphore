@@ -1,56 +1,44 @@
 {
-  "name": "metaphore",
-  "version": "1.0.0",
-  "description": "Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.",
-  "main": "index.js",
+  "name": "next-metaphor",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "next dev -p 2312",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "release": "semantic-release"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StreetCommunityProgrammer/metaphore.git"
+  "engines": {
+    "node": ">=16"
   },
-  "keywords": [
-    "sharing",
-    "blogging",
-    "freestyle",
-    "programming",
-    "metaphor"
-  ],
-  "author": "Imam Ali Mustofa <d.darkterminal@gmail.com> (https://bettadevindonesia.com)",
-  "license": "GPL-3.0-only",
-  "bugs": {
-    "url": "https://github.com/StreetCommunityProgrammer/metaphore/issues"
-  },
-  "homepage": "https://github.com/StreetCommunityProgrammer/metaphore#readme",
   "dependencies": {
-    "@primer/octicons-react": "^18.0.0",
-    "@primer/react": "^35.20.0",
-    "axios": "^1.3.4",
+    "@giscus/react": "^2.2.8",
+    "daisyui": "^2.51.3",
     "date-fns": "^2.29.3",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "gray-matter": "^4.0.3",
+    "lodash": "^4.17.21",
+    "next": "13.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-is": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-markdown": "^8.0.5",
-    "react-router-dom": "^6.8.2",
     "react-syntax-highlighter": "^15.5.0",
-    "react-use": "^17.4.0",
     "remark-gfm": "^3.0.1",
-    "styled-components": "^5.3.8",
-    "swr": "^2.0.4"
+    "sharp": "^0.31.3",
+    "theme-change": "^2.5.0"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
     "autoprefixer": "^10.4.13",
-    "commitizen": "^4.3.0",
+    "eslint-config-prettier": "^8.7.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6",
-    "vite": "^4.1.1"
+    "prettier": "^2.8.4",
+    "semantic-release": "^20.1.1",
+    "tailwindcss": "^3.2.7"
   }
 }
