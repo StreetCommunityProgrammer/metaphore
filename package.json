@@ -38,6 +38,7 @@
 		"date-fns": "^2.29.3",
 		"eslint": "8.35.0",
 		"eslint-config-next": "13.2.3",
+		"glob": "^9.2.1",
 		"gray-matter": "^4.0.3",
 		"lodash": "^4.17.21",
 		"next": "13.2.3",
