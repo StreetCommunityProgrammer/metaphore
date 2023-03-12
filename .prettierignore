@@ -3,3 +3,7 @@ out/
 dist/
 test-fixtures/
 node_modules/
+.next/
+.github/
+package-lock.json
+public/collections/stories/

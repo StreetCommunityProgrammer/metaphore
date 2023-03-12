@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.important-text {
+		@apply font-bold bg-gradient-to-r from-slate-300 via-slate-400 to-slate-500 bg-clip-text text-transparent;
+	}
+	.text-mark-dope {
+		@apply bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white px-1 italic;
+	}
+	.text-glitch {
+		position: relative;
+		display: inline-block;
+	}
+
+	.text-glitch::before {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+	}
+
+	.text-glitch::after {
+		content: attr(data-text);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		animation: glitch 0.5s ease-in-out infinite;
+	}
+}
+
+@layer utilities {
+	@keyframes glitch {
+		0% {
+			transform: skew(0deg);
+		}
+		20% {
+			transform: skew(-20deg);
+		}
+		40% {
+			transform: skew(20deg);
+		}
+		60% {
+			transform: skew(-10deg);
+		}
+		80% {
+			transform: skew(10deg);
+		}
+		100% {
+			transform: skew(0deg);
+		}
+	}
+}
