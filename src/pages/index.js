@@ -40,7 +40,7 @@ export default function Home() {
 						/>
 					</div>
 					<Link
-						href="/"
+						href="/stories"
 						className="rounded-md p-3 shadow-md bg-zinc-900 text-white font-bold"
 					>
 						Read Our Metaphor Story <GoChevronRight className="inline" />
