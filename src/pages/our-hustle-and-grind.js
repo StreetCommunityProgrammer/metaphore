@@ -2,7 +2,7 @@ import Meta from '@/components/Meta';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoMarkGithub } from 'react-icons/go';
-import metaphor from '../../public/metaphor.png';
+import metaphor from '../../public/metaphor.webp';
 
 export default function OurHustleandGrind() {
 	return (

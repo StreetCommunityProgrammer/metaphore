@@ -3,7 +3,7 @@ import GlitchTextOne from '@/components/effects/GlitchTextOne';
 import Image from 'next/image';
 import Link from 'next/link';
 import { GoChevronRight } from 'react-icons/go';
-import metaphor from '../../public/metaphor.png';
+import metaphor from '../../public/metaphor.webp';
 
 export default function Home() {
 	return (

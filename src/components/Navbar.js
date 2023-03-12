@@ -69,8 +69,8 @@ function Navbar() {
 						</ActiveLink>
 					</li>
 					<li>
-						<ActiveLink className="font-bold" href="/our-hustle-and-grind">
-							Contribution Guidelines
+						<ActiveLink className="font-bold" href="/the-culture-and-vibe">
+							The Culture And Vibe
 						</ActiveLink>
 					</li>
 				</ul>
