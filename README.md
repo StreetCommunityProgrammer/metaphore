@@ -4,7 +4,7 @@
     <h1 align="center">Metaphore</h1>
     <p align="center">Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.
 </p>
-    <p align="center"><strong><a href="https://streetcommunityprogrammer.github.io/metaphore/">See it in action!</a></strong></p>
+    <p align="center"><strong><a href="https://metaphore.vercel.app">See it in action!</a></strong></p>
     <br><br><br>
 </p>
 
