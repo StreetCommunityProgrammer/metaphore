@@ -8,6 +8,7 @@ import StoryHeader from '@/components/stories/StoryHeader';
 import Meta from '@/components/Meta';
 import Giscus from '@giscus/react';
 import { GISCUS } from '@/constants/giscus-config';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export async function getStaticPaths() {
 	const posts = getAllStories(`public/collections/stories`);
@@ -88,6 +89,7 @@ export default function TheStory({ data }) {
 						loading="lazy"
 					/>
 				</div>
+				<ScrollToTop />
 			</article>
 		</>
 	);
