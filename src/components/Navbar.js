@@ -3,7 +3,7 @@ import ThemeSwitcher from './ThemeSwicther';
 import Image from 'next/image';
 import ActiveLink from './ActiveLink';
 import Link from 'next/link';
-import favicon32 from '../../public/favicon/favicon-32x32.png';
+import favicon32 from '../../public/favicon/favicon-32x32.webp';
 
 function Navbar() {
 	return (
@@ -51,7 +51,7 @@ function Navbar() {
 						alt="Metaphor Logo"
 						width={32}
 						height={32}
-						className="mx-auto"
+						className="mr-2"
 					/>
 					<span>Metaphore</span>
 				</Link>
