@@ -24,6 +24,7 @@
 	"scripts": {
 		"dev": "next dev -p 2312",
 		"build": "next build",
+		"postbuild": "next-sitemap",
 		"start": "next start",
 		"lint": "next lint",
 		"semantic-release": "semantic-release",
@@ -44,6 +45,7 @@
 		"next": "13.2.3",
 		"next-seo": "^5.15.0",
 		"next-share": "^0.19.0",
+		"next-sitemap": "^4.0.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.8.0",
