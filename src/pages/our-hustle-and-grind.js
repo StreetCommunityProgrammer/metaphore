@@ -3,11 +3,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GoMarkGithub } from 'react-icons/go';
 import metaphor from '../../public/metaphor.webp';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
 
 export default function OurHustleandGrind() {
+	const router = useRouter();
+	const currentUrl = router.asPath;
 	return (
 		<>
-			<Meta title="Our Hustle and Grind" />
+			<Meta />
+			<NextSeo
+				title={`Our Hustle and Grind | ${NEXT_APP_NAME}`}
+				description="Welcome to the Street Community Programmer, where the code is funky fresh and the possibilities are endless."
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: NEXT_BASE_URL + currentUrl,
+					siteName: NEXT_APP_NAME,
+				}}
+			/>
 			<div className="min-h-[calc(100vh-100px)]">
 				<div className="grid gap-3 grid-cols-4 px-16 py-16 bg-zinc-50 dark:bg-zinc-900">
 					<div className="col-span-1">

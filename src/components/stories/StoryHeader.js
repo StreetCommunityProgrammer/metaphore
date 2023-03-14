@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { GoClock } from 'react-icons/go';
 import Breadcrumb from '../Breadcrumb';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function StoryHeader({ title, author, language, createdAt }) {
 	return (
@@ -28,7 +29,7 @@ function StoryHeader({ title, author, language, createdAt }) {
 							Github Accout
 						</span>
 						<strong className="font-bold text-zinc-50 dark:text-zinc-900">
-							@{author}
+							<Link href={`https://github.com/${author}`} target="_blank">@{author}</Link>
 						</strong>
 					</div>
 				</div>

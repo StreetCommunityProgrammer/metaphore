@@ -8,6 +8,12 @@ import StoryHeader from '@/components/stories/StoryHeader';
 import Meta from '@/components/Meta';
 import Giscus from '@giscus/react';
 import { GISCUS } from '@/constants/giscus-config';
+import ScrollToTop from '@/components/ScrollToTop';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import { seoBanner } from '@/constants/ogimage-rest-generator';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
+import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, RedditIcon, RedditShareButton, TwitterIcon, TwitterShareButton } from 'next-share';
 
 export async function getStaticPaths() {
 	const posts = getAllStories(`public/collections/stories`);
@@ -32,9 +38,33 @@ export async function getStaticProps(context) {
 }
 
 export default function TheStory({ data }) {
+	const router = useRouter()
+	const currentUrl = router.asPath
 	return (
 		<>
-			<Meta title={`Metaphor Story - ${data.frontmatter.title}`} />
+			<Meta />
+			<NextSeo
+				title={`Metaphor Story - ${data.frontmatter.title} | ${NEXT_APP_NAME}`}
+				description={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+				canonical={NEXT_BASE_URL + currentUrl}
+				openGraph={{
+					type: 'article',
+					article: {
+						publishedTime: data.frontmatter.created_at,
+						modifiedTime: data.frontmatter.created_at,
+						authors: [].push(`https://github.com/${data.frontmatter.author}`),
+					},
+					images: [
+						{
+							url: seoBanner(data.frontmatter.title, data.frontmatter.author),
+							width: 850,
+							height: 650,
+							alt: data.frontmatter.title,
+						},
+					],
+					siteName: 'Metaphore (SCP)',
+				}}
+			/>
 			<article>
 				<StoryHeader
 					title={data.frontmatter.title}
@@ -72,6 +102,35 @@ export default function TheStory({ data }) {
 							},
 						}}
 					/>
+					<div className="my-3 flex gap-3">
+						<div className="py-1">
+							<span className="font-bold italic">Share This Story</span>
+						</div>
+						<FacebookShareButton
+							url={NEXT_BASE_URL + currentUrl}
+							quote={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+							hashtag={'#MetaphoreSCP #StreetCommunityProgrammer'}
+						>
+							<FacebookIcon size={32} round />
+						</FacebookShareButton>
+						<RedditShareButton
+							url={NEXT_BASE_URL + currentUrl}
+							title={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+							windowWidth={660}
+							windowHeight={460}
+						>
+							<RedditIcon size={32} round />
+						</RedditShareButton>
+						<TwitterShareButton
+							url={NEXT_BASE_URL + currentUrl}
+							title={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+						>
+							<TwitterIcon size={32} round />
+						</TwitterShareButton>
+						<LinkedinShareButton url={NEXT_BASE_URL + currentUrl}>
+							<LinkedinIcon size={32} round />
+						</LinkedinShareButton>
+					</div>
 					<Giscus
 						id="commets"
 						repo={GISCUS.repo}
@@ -88,6 +147,7 @@ export default function TheStory({ data }) {
 						loading="lazy"
 					/>
 				</div>
+				<ScrollToTop />
 			</article>
 		</>
 	);
