@@ -2,6 +2,9 @@ import React from 'react';
 import Meta from '@/components/Meta';
 import { getLanguageLists } from '@/services/markdownService';
 import StoryLanguages from '@/components/stories/StoryLanguages';
+import { NextSeo } from 'next-seo';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps() {
 	const languages = getLanguageLists();
@@ -11,9 +14,21 @@ export async function getStaticProps() {
 }
 
 function Stories({ languages }) {
+	const router = useRouter();
+	const currentUrl = router.asPath;
 	return (
 		<>
-			<Meta title="The Stories of Metaphore" />
+			<Meta />
+			<NextSeo
+				title={`The Stories of Metaphore | ${NEXT_APP_NAME}`}
+				description="Programming It's an art, open to interpretation. Metaphor stories is a unique interpretation in a particular language, thinking and learn, our stories will inspire think outside the box."
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: NEXT_BASE_URL + currentUrl,
+					siteName: NEXT_APP_NAME,
+				}}
+			/>
 			<section className="w-10/12 mx-auto my-10 min-h-screen">
 				<h1 className="font-semibold text-center text-4xl mb-3 text-white dark:text-zinc-900">
 					Metaphor Stories

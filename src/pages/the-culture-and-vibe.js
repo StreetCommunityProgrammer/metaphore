@@ -2,11 +2,26 @@ import Meta from '@/components/Meta';
 import Image from 'next/image';
 import Link from 'next/link';
 import metaphorSquare from '../../public/images/metaphor-square.webp';
+import { NextSeo } from 'next-seo';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
+import { useRouter } from 'next/router';
 
 function TheCultureAndVibe() {
+	const router = useRouter();
+	const currentUrl = router.asPath;
 	return (
 		<>
-			<Meta title="The Culture And Vibe" />
+			<Meta />
+			<NextSeo
+				title={`The Culture And Vibe | ${NEXT_APP_NAME}`}
+				description="We're stoked that you want to join our team of Punks, Freestylers, and Software Freestyle Engineers. Let's rock this joint with some awesome contributions!"
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: NEXT_BASE_URL + currentUrl,
+					siteName: NEXT_APP_NAME,
+				}}
+			/>
 			<div className="min-h-[calc(100vh-100px)]">
 				<header className="px-16 py-16 bg-zinc-50 dark:bg-zinc-900 flex justify-center relative">
 					<h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">

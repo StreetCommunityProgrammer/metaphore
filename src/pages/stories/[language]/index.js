@@ -4,6 +4,9 @@ import StoryLists from '@/components/stories/StoryLists';
 import { getAllStories, getLanguageLists } from '@/services/markdownService';
 import { capitalize } from 'lodash';
 import React from 'react';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
 
 export async function getStaticPaths() {
 	const allLanguage = getLanguageLists();
@@ -27,9 +30,21 @@ export async function getStaticProps({ params }) {
 }
 
 function StoryBaseLanguage({ posts, language }) {
+	const router = useRouter();
+	const currentUrl = router.asPath;
 	return (
 		<>
-			<Meta title={`${capitalize(language)} Metaphor Stories`} />
+			<Meta />
+			<NextSeo
+				title={`${capitalize(language)} Metaphor Stories | ${NEXT_APP_NAME}`}
+				description={`Our metaphor stories are a unique interpretation of programming in ${language} that will inspire you to think outside the box and explore new ways of coding.`}
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: NEXT_BASE_URL + currentUrl,
+					siteName: NEXT_APP_NAME,
+				}}
+			/>
 			<header className="bg-zinc-50 dark:bg-zinc-900 px-32 py-20">
 				<h1 className="text-4xl font-semibold text-zinc-900 dark:text-zinc-50">
 					Our metaphor stories are a unique interpretation of programming in{' '}

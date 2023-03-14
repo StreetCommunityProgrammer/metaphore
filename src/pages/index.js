@@ -2,6 +2,8 @@ import Meta from '@/components/Meta';
 import GlitchTextOne from '@/components/effects/GlitchTextOne';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
+import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
 import { GoChevronRight } from 'react-icons/go';
 import metaphor from '../../public/metaphor.webp';
 
@@ -9,6 +11,16 @@ export default function Home() {
 	return (
 		<>
 			<Meta />
+			<NextSeo
+				title={NEXT_APP_NAME}
+				description={`Story as Code. Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.`}
+				openGraph={{
+					type: 'website',
+					locale: 'en_US',
+					url: NEXT_BASE_URL,
+					siteName: NEXT_APP_NAME,
+				}}
+			/>
 			<div className="flex align-middle justify-center">
 				<div className="py-16 text-center">
 					<div className="text-center">
