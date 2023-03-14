@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/StreetCommunityProgrammer/metaphore/compare/v1.0.0...v1.1.0) (2023-03-14)
+
+
+### Bug Fixes
+
+* **seo:** og-image structure ([a396ac1](https://github.com/StreetCommunityProgrammer/metaphore/commit/a396ac1c9dd0e4828598a7642378ca953a5c028b))
+
+
+### Features
+
+* **components:** adding scroll to top ([c0b42ca](https://github.com/StreetCommunityProgrammer/metaphore/commit/c0b42cad3d3494969a2124c772711722b69e222e))
+* **seo:** adding seo support in each page ([5dc85aa](https://github.com/StreetCommunityProgrammer/metaphore/commit/5dc85aa8c7285ce3e204277bf1979c23d53c4e7b))
+* **story:** adding scroll to top button ([c3a41f0](https://github.com/StreetCommunityProgrammer/metaphore/commit/c3a41f02ff66d5d66bdbd1a109d790f528a7e351))
+
 # 1.0.0 (2023-03-13)
 
 
