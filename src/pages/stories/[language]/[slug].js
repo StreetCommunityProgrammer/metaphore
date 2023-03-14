@@ -54,12 +54,14 @@ export default function TheStory({ data }) {
 						modifiedTime: data.frontmatter.created_at,
 						authors: [].push(`https://github.com/${data.frontmatter.author}`),
 					},
-					images: {
-						url: seoBanner(data.frontmatter.title, data.frontmatter.author),
-						width: 850,
-						height: 650,
-						alt: data.frontmatter.title,
-					},
+					images: [
+						{
+							url: seoBanner(data.frontmatter.title, data.frontmatter.author),
+							width: 850,
+							height: 650,
+							alt: data.frontmatter.title,
+						},
+					],
 					siteName: 'Metaphore (SCP)',
 				}}
 			/>
@@ -101,8 +103,8 @@ export default function TheStory({ data }) {
 						}}
 					/>
 					<div className="my-3 flex gap-3">
-						<div className='py-1'>
-							<span className='font-bold italic'>Share This Story</span>
+						<div className="py-1">
+							<span className="font-bold italic">Share This Story</span>
 						</div>
 						<FacebookShareButton
 							url={NEXT_BASE_URL + currentUrl}
