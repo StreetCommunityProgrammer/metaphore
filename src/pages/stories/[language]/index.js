@@ -7,6 +7,7 @@ import React from 'react';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
+import Link from 'next/link';
 
 export async function getStaticPaths() {
 	const allLanguage = getLanguageLists();
@@ -57,7 +58,14 @@ function StoryBaseLanguage({ posts, language }) {
 				<RandomQuote language={language} />
 			</header>
 			<article className="my-5 mx-32">
-				{posts.length > 0 ? <StoryLists stories={posts} /> : null}
+				{posts.length > 0 ? <StoryLists stories={posts} /> : (
+					<div className='h-96 flex justify-center items-center'>
+						<div className='text-center'>
+							<h1 className='text-2xl mb-3'>No one telling a story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span> , did you have story? Share your story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span></h1>
+							<Link href={`https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2C${language}&template=create_${language}_story.yml&title=Your+Story+Title`} target='_blank' className="btn bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">Ok, let me tell you a story</Link>
+						</div>
+					</div>
+				)}
 			</article>
 		</>
 	);

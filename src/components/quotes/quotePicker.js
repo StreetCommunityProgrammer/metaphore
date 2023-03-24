@@ -1,5 +1,6 @@
 import {
 	css,
+	golang,
 	java,
 	javascript,
 	maths,
@@ -15,6 +16,8 @@ export default function quotePicker(language) {
 	switch (language) {
 		case 'css':
 			return css;
+		case 'golang':
+			return golang;
 			break;
 		case 'java':
 			return java;
