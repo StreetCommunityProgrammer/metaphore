@@ -182,6 +182,30 @@ export const ruby = [
 	'Ruby is a language that is designed to be fun to use, while still being powerful and flexible.',
 ];
 
+export const golang = [
+	"Go will be the server language of the future.",
+	"Go is a programming language made by Google for building large-scale, high-performance systems.",
+	"Go is an open-source programming language that makes it easy to build simple, reliable, and efficient software.",
+	"Go is a language designed to be simple and easy to learn, yet powerful enough to handle complex systems.",
+	"Go is a modern programming language that combines the best features of several other languages.",
+	"Go is fast, fun, and designed for concurrency and scalability.",
+	"Go is designed for large-scale distributed systems and web applications.",
+	"Go's built-in concurrency features make it easy to write programs that take full advantage of modern hardware.",
+	"Go's syntax is clean and easy to read, making it a great language for beginners and experienced developers alike.",
+	"Go is a compiled language, which means that it's faster than interpreted languages like Python or Ruby.",
+	"Go is a statically-typed language, which means that it's more reliable and easier to maintain than dynamically-typed languages.",
+	"Go is a great language for building network servers and APIs.",
+	"Go's garbage collector makes memory management easy and efficient.",
+	"Go is a language that's easy to write, read, and maintain.",
+	"Go is a great choice for building high-performance, scalable systems.",
+	"Go's type system is designed to catch errors at compile-time, making it easier to write bug-free code.",
+	"Go's standard library includes powerful networking and concurrency features.",
+	"Go is a language that's designed for large teams working on complex projects.",
+	"Go's simplicity and power make it a great language for building microservices.",
+	"Go is an expressive language that lets developers write concise and readable code."
+];
+
+
 export const rust = [
 	'Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.',
 	'Rust is a language that is designed for performance, safety, and concurrency.',
