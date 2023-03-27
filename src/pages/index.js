@@ -22,7 +22,7 @@ export default function Home() {
 				}}
 			/>
 			<div className="flex flex-col sm:flex-row justify-center items-center">
-				<div className="py-8 sm:py-16 text-center">
+				<div className="py-8 px-8 sm:py-16 text-center">
 					<div className="text-center">
 						<div className="badge badge-info badge-outline dark:badge-error dark:badge-outline">
 							Street Community Programmer (SCP)
