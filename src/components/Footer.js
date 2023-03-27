@@ -4,10 +4,10 @@ import { GiSheep } from 'react-icons/gi';
 
 function Footer() {
 	return (
-		<footer className="footer self-end dark:bg-white bg-zinc-900 px-4 py-2 border-t-2">
-			<div className="items-center grid-flow-col">
+		<footer className="self-end dark:bg-white bg-zinc-900 px-4 py-2 border-t-2 sm:flex sm:items-center sm:justify-between">
+			<div className="flex items-center">
 				<GiSheep size={32} />
-				<p>
+				<p className="ml-2 text-sm sm:text-base">
 					<Link
 						href="https://www.gnu.org/licenses/licenses.html#GPL"
 						target="_blank"
@@ -18,22 +18,22 @@ function Footer() {
 					- Nobody should be restricted by the knowledge they have.
 				</p>
 			</div>
-			<div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-				<span className="font-normal text-md">Build with</span>
+			<div className="flex justify-center mt-2 sm:mt-0 text-center items-center">
+				<span className="font-normal text-sm sm:text-md">Built with</span>
 				<Image
 					src="/next.svg"
 					alt="NextJS Icon"
 					width={50}
 					height={28}
-					className="mt-1 bg-white p-1 dark:grayscale"
+					className="ml-2 mt-1 bg-white p-1 dark:grayscale"
 				/>
-				<span className="font-normal text-md">host by</span>
+				<span className="font-normal text-sm sm:text-md">host by</span>
 				<Image
 					src="/vercel.svg"
 					alt="Vercel Icon"
 					width={50}
 					height={28}
-					className="mt-1 bg-white p-1 dark:grayscale"
+					className="ml-2 mt-1 bg-white p-1 dark:grayscale"
 				/>
 			</div>
 		</footer>
