@@ -24,41 +24,35 @@ export default function OurHustleandGrind() {
 				}}
 			/>
 			<div className="min-h-[calc(100vh-100px)]">
-				<div className="grid gap-3 grid-cols-4 px-16 py-16 bg-zinc-50 dark:bg-zinc-900">
-					<div className="col-span-1">
+				<div className="grid gap-3 grid-cols-1 md:grid-cols-4 px-4 md:px-16 py-16 bg-zinc-50 dark:bg-zinc-900">
+					<div className="col-span-1 md:col-span-1">
 						<Image
 							src={metaphor}
 							alt="Metaphor Banner"
 							placeholder="blur"
 							width={530}
 							height={298}
-							className="mx-auto"
+							className="mx-auto w-full h-auto md:w-auto md:h-full object-cover"
 						/>
 					</div>
-					<div className="col-span-3">
+					<div className="col-span-1 md:col-span-3">
 						<h1 className="text-5xl font-bold dark:text-white text-zinc-900 mb-3">
-							What&apos;s up Punk!
+							What's up Punk!
 						</h1>
 						<p className="text-4xl font-light dark:text-white text-zinc-900 mb-3">
-							Welcome to the Street Community Programmer, where the code is
-							funky fresh and the possibilities are endless.
+							Welcome to the Street Community Programmer, where the code is funky fresh and the possibilities are endless.
 						</p>
 						<div className="flex gap-3">
-							<Link
-								href=""
-								target="_blank"
-								role="button"
-								className="btn btn-sm rounded-md gap-2 dark:btn-ghost btn-active"
-							>
-								<GoMarkGithub className="dark:text-white" />{' '}
+							<a href="#" target="_blank" className="btn btn-sm rounded-md gap-2 dark:btn-ghost btn-active">
+								<i className="fab fa-github dark:text-white"></i>
 								<span className="capitalize dark:text-white">
 									Github Repository
 								</span>
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>
-				<div className="p-5 mx-auto w-7/12">
+				<div className="p-5 mx-auto md:w-7/12">
 					<h2 className="text-4xl font-light divider mb-9">
 						Our Hustle and Grind
 					</h2>

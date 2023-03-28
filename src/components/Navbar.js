@@ -39,8 +39,8 @@ function Navbar() {
 							<ActiveLink href="/stories">Stories</ActiveLink>
 						</li>
 						<li>
-							<ActiveLink href="/our-hustle-and-grind">
-								Contribution Guidelines
+							<ActiveLink href="/the-culture-and-vibe">
+							The Culture And Vibe
 							</ActiveLink>
 						</li>
 					</ul>

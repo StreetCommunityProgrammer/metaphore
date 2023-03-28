@@ -24,7 +24,7 @@ function TheCultureAndVibe() {
 			/>
 			<div className="min-h-[calc(100vh-100px)]">
 				<header className="px-16 py-16 bg-zinc-50 dark:bg-zinc-900 flex justify-center relative">
-					<h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">
+					<h1 className="text-4xl text-center font-bold text-zinc-900 dark:text-zinc-50">
 						The Culture And Vibe
 					</h1>
 					<Image
@@ -36,7 +36,7 @@ function TheCultureAndVibe() {
 						className="absolute bottom-[-20px]"
 					/>
 				</header>
-				<article className="w-9/12 py-10 px-5 mx-auto">
+				<article className="p-5 mx-auto md:w-7/12 py-10">
 					<p className="font-light text-2xl mb-3">
 						Hey there, fellow Metaphor creators! We&#39;re stoked that you want
 						to join our team of Punks, Freestylers, and Software Freestyle
