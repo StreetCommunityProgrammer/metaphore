@@ -3,7 +3,7 @@
 <p align="center">
     <h1 align="center">Metaphore</h1>
     <p align="center"><a href="https://www.producthunt.com/posts/metaphore-story-scp?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-metaphore&#0045;story&#0045;scp" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=384637&theme=light" alt="Metaphore&#0032;Story&#0032;&#0040;SCP&#0041; - Public&#0032;Collections&#0032;of&#0032;Metaphor&#0032;our&#0032;Freestylers&#0032;in&#0032;the&#0032;world&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a></p>
-    <p align="center">Public Collections of Metaphor our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.</p>
+    <p align="center">Public Collections of Metaphore our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.</p>
     <p align="center"><strong><a href="https://metaphore.vercel.app">See it in action!</a></strong></p>
     <br><br><br>
 </p>
