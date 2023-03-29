@@ -46,10 +46,10 @@ function StoryBaseLanguage({ posts, language }) {
 					siteName: NEXT_APP_NAME,
 				}}
 			/>
-			<header className="bg-zinc-50 dark:bg-zinc-900 px-32 py-20">
-				<h1 className="text-4xl font-semibold text-zinc-900 dark:text-zinc-50">
+			<header className="bg-zinc-50 dark:bg-zinc-900 px-5 md:px-10 lg:px-20 py-8 md:py-12 lg:py-20">
+				<h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-zinc-900 dark:text-zinc-50">
 					Our metaphor stories are a unique interpretation of programming in{' '}
-					<span className="bg-zinc-900 text-zinc-50 dark:bg-zinc-50 dark:text-zinc-900 italic px-2">
+					<span className="bg-zinc-900 text-zinc-50 dark:bg-zinc-50 dark:text-zinc-900 italic px-1 md:px-2 xl:px-4">
 						{language}
 					</span>{' '}
 					that will inspire you to think outside the box and explore new ways of
@@ -57,12 +57,17 @@ function StoryBaseLanguage({ posts, language }) {
 				</h1>
 				<RandomQuote language={language} />
 			</header>
-			<article className="my-5 mx-32">
+
+			<article className="my-5 mx-4 md:mx-32">
 				{posts.length > 0 ? <StoryLists stories={posts} /> : (
-					<div className='h-96 flex justify-center items-center'>
+					<div className='h-72 md:h-96 flex justify-center items-center'>
 						<div className='text-center'>
-							<h1 className='text-2xl mb-3'>No one telling a story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span> , did you have story? Share your story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span></h1>
-							<Link href={`https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2C${language}&template=create_${language}_story.yml&title=Your+Story+Title`} target='_blank' className="btn bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">Ok, let me tell you a story</Link>
+							<h1 className='text-lg md:text-2xl mb-3'>
+								No one telling a story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span> , did you have story? Share your story about <span className="bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 italic px-2">{language}</span>
+							</h1>
+							<Link href={`https://github.com/StreetCommunityProgrammer/metaphore/issues/new?assignees=darkterminal%2Cmkubdev&labels=metaphore%2C${language}&template=create_${language}_story.yml&title=Your+Story+Title`} target='_blank' className="btn bg-zinc-50 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50">
+								Ok, let me tell you a story
+							</Link>
 						</div>
 					</div>
 				)}
