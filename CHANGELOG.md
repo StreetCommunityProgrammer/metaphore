@@ -1,3 +1,25 @@
+# [1.2.0](https://github.com/StreetCommunityProgrammer/metaphore/compare/v1.1.0...v1.2.0) (2023-03-29)
+
+
+### Bug Fixes
+
+* **footer:** changes to Layout.js and _document.js ([#43](https://github.com/StreetCommunityProgrammer/metaphore/issues/43)) ([9bf6e47](https://github.com/StreetCommunityProgrammer/metaphore/commit/9bf6e47c6df7014782b070475212107e97ea9747))
+* navbar link for mobile now match desktop links ([3475205](https://github.com/StreetCommunityProgrammer/metaphore/commit/3475205dee99ba4d249f9e75ae49cdb1634acc29))
+* remove  class\ footer need to be refactored ([d94b718](https://github.com/StreetCommunityProgrammer/metaphore/commit/d94b718e017462bd9b543cd0fd72bcc98a7252a1))
+
+
+### Features
+
+* add [@darkterminal](https://github.com/darkterminal) suggestion ([cf9c2b5](https://github.com/StreetCommunityProgrammer/metaphore/commit/cf9c2b5b2ebf5ad8b73df32053885a10e8aaa9a3))
+* Add Tailwind responsive utility class ([#37](https://github.com/StreetCommunityProgrammer/metaphore/issues/37)) ([0fa0a38](https://github.com/StreetCommunityProgrammer/metaphore/commit/0fa0a3821a6ee9b990a17ed4601d3d4794700de8))
+* adding golang brand icon ([6f6a58a](https://github.com/StreetCommunityProgrammer/metaphore/commit/6f6a58a89f13cf4ce5822e9905a26f44ccdcf5a2))
+* adding golang quotes ([dbf514b](https://github.com/StreetCommunityProgrammer/metaphore/commit/dbf514b502df7713fef9cdb2507dbcc8b4203e16))
+* display no story page ([c35a029](https://github.com/StreetCommunityProgrammer/metaphore/commit/c35a02946425bab895e6f0dadc92aab4eb3d9af7))
+* **footer:** add fixed position to the footer ([6267e3b](https://github.com/StreetCommunityProgrammer/metaphore/commit/6267e3b9483bc620921e0a9f24b37f9f65ca9d6b))
+* **resp:** fix homepage responsivness ([00404bd](https://github.com/StreetCommunityProgrammer/metaphore/commit/00404bd9c339d497b3d9ddfd8a40ec0adbc42968))
+* **responsive:** add responsivness to pages ([96c7e0a](https://github.com/StreetCommunityProgrammer/metaphore/commit/96c7e0a1e692f7ad77b64304e659275c3575efbb))
+* update _document.js to add padding to body ([11195cc](https://github.com/StreetCommunityProgrammer/metaphore/commit/11195ccf2e78b8f2fe7e6a2c42c5953232f39817))
+
 # [1.1.0](https://github.com/StreetCommunityProgrammer/metaphore/compare/v1.0.0...v1.1.0) (2023-03-14)
 
 
