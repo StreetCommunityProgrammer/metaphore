@@ -27,7 +27,7 @@ function ScrollToTop() {
 
 	return (
 		<button
-			className={`btn btn-sm fixed bottom-12 right-8 ${
+			className={`btn btn-sm fixed bottom-12 right-8 z-50 ${
 				isVisible ? null : 'hidden'
 			}`}
 			onClick={() => backToTop()}
