@@ -72,7 +72,7 @@ export default function TheStory({ data }) {
 					language={data.frontmatter.language}
 					createdAt={data.frontmatter.created_at}
 				/>
-				<div className="markdownHtml w-9/12 mx-auto my-10">
+				<div className="markdownHtml w-11/12 sm:w-9/12 mx-auto my-10">
 					<ReactMarkdown
 						children={data.content}
 						remarkPlugins={[remarkGfm]}
