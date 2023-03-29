@@ -36,13 +36,13 @@ export default function OurHustleandGrind() {
 						/>
 					</div>
 					<div className="col-span-1 md:col-span-3">
-						<h1 className="text-5xl font-bold dark:text-white text-zinc-900 mb-3">
+						<h1 className="text-5xl font-bold dark:text-white text-zinc-900 mb-3 sm:text-left text-center">
 							What's up Punk!
 						</h1>
-						<p className="text-4xl font-light dark:text-white text-zinc-900 mb-3">
+						<p className="text-4xl font-light dark:text-white text-zinc-900 mb-3 sm:text-left text-center">
 							Welcome to the Street Community Programmer, where the code is funky fresh and the possibilities are endless.
 						</p>
-						<div className="flex gap-3">
+						<div className="flex sm:justify-start justify-center gap-3">
 							<a href="#" target="_blank" className="btn btn-sm rounded-md gap-2 dark:btn-ghost btn-active">
 								<i className="fab fa-github dark:text-white"></i>
 								<span className="capitalize dark:text-white">
