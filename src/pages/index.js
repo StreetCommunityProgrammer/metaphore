@@ -21,7 +21,7 @@ export default function Home() {
 					siteName: NEXT_APP_NAME,
 				}}
 			/>
-			<div className="flex flex-col sm:flex-row justify-center items-center">
+			<div className="flex flex-col justify-center items-center h-screen sm:flex-row">
 				<div className="py-8 px-8 sm:py-16 text-center">
 					<div className="text-center">
 						<div className="badge badge-info badge-outline dark:badge-error dark:badge-outline">
