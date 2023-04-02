@@ -78,7 +78,12 @@ export default function TheStory({ data }) {
 						remarkPlugins={[remarkGfm]}
 						className={styles.markdownHtml}
 						components={{
-							code({ node, inline, className, children, ...props }) {
+							a: ({ href, children }) => (
+								<a href={href} className="link link-primary">
+									{children}
+								</a>
+							),
+							code: ({ node, inline, className, children, ...props }) => {
 								const match = /language-(\w+)/.exec(className || '');
 								return !inline && match ? (
 									<SyntaxHighlighter
