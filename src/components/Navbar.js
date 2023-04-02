@@ -40,7 +40,12 @@ function Navbar() {
 						</li>
 						<li>
 							<ActiveLink href="/the-culture-and-vibe">
-							The Culture And Vibe
+								The Culture And Vibe
+							</ActiveLink>
+						</li>
+						<li>
+							<ActiveLink href="/paperdocs">
+								Paper Docs
 							</ActiveLink>
 						</li>
 					</ul>
@@ -71,6 +76,11 @@ function Navbar() {
 					<li>
 						<ActiveLink className="font-bold" href="/the-culture-and-vibe">
 							The Culture And Vibe
+						</ActiveLink>
+					</li>
+					<li>
+						<ActiveLink href="/paperdocs">
+							Paper Docs
 						</ActiveLink>
 					</li>
 				</ul>
