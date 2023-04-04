@@ -7,7 +7,7 @@ body:
     - type: markdown
       attributes:
           value: "**Share the current and relevant details**"
-    - type: input
+    - type: textarea
       id: ruby-title
       attributes:
           label: The Back Story about your Ruby Metaphor
