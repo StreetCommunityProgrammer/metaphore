@@ -14,7 +14,7 @@ Hi there, I'm a software engineer who's obsessed with finding ways to write less
 
 #### The Formula
 
-I've created a new component called `DynamicHeroicons` that allows for dynamic rendering of Heroicons based on a prop value. The component imports all the Solid icons from the '@heroicons/react/24/solid' package and selects the appropriate icon based on the value of the 'icon' prop.
+I've created a new component called `DynamicHeroicons` that allows for dynamic rendering of Heroicons based on a prop value. The component imports all the Solid icons from the `@heroicons/react/24/solid` package and selects the appropriate icon based on the value of the `icon` prop.
 
 * `src/components/DynamicHeroicons.js`
 
