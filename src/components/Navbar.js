@@ -7,7 +7,7 @@ import favicon32 from '../../public/favicon/favicon-32x32.webp';
 
 function Navbar() {
 	return (
-		<div className="navbar bg-base-100">
+		<div className="navbar shadow-sm backdrop-filter backdrop-blur-lg backdrop-opacity-90">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
