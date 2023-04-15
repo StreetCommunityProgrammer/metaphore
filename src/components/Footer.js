@@ -7,8 +7,8 @@ function Footer() {
 		<div className="mt-auto">
 			<footer className="absolute bottom-0 w-full dark:bg-white bg-zinc-900 px-4 py-2 border-t-2 sm:flex sm:items-center sm:justify-between">
 				<div className="flex items-center">
-					<GiSheep size={32} />
-					<p className="ml-2 text-sm sm:text-base">
+					<GiSheep size={32} className='hidden sm:block' />
+					<p className="ml-2 text-sm sm:text-base sm:text-left text-center">
 						<Link
 							href="https://www.gnu.org/licenses/licenses.html#GPL"
 							target="_blank"
