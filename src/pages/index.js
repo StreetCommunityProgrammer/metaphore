@@ -33,12 +33,8 @@ export default function Home({ posts }) {
 					siteName: NEXT_APP_NAME,
 				}}
 			/>
-			<div className="flex flex-col gap-3 justify-center items-center py-8 px-8 sm:py-10 sm:px-10 relative -z-50">
-				<div className="absolute top-5 left-10 w-72 h-72 bg-zinc-300 dark:bg-zinc-400 rounded-full dark:mix-blend-multiply filter blur-xl -z-50 opacity-20 sm:opacity-70 animate-blob"></div>
-				<div className="absolute top-1/2 left-1/3 w-32 h-32 bg-zinc-300 dark:bg-zinc-400 rounded-full dark:mix-blend-multiply filter blur-xl -z-50 opacity-20 sm:opacity-70 animate-blob animation-delay-4000"></div>
-				<div className="absolute top-1/2 right-1/3 w-32 h-32 bg-zinc-300 dark:bg-zinc-400 rounded-full dark:mix-blend-multiply filter blur-xl -z-50 opacity-20 sm:opacity-70 animate-blob animation-delay-6000"></div>
-				<div className="absolute -bottom-10 right-14 w-52 h-52 bg-zinc-300 dark:bg-zinc-400 rounded-full dark:mix-blend-multiply filter blur-xl -z-50 opacity-20 sm:opacity-70 animate-blob animation-delay-4000"></div>
-				<div className='text-center relative -z-40'>
+			<div className="flex flex-col gap-3 justify-center items-center py-8 px-8 sm:py-10 sm:px-10">
+				<div className='text-center'>
 					<div className="badge badge-info badge-outline dark:badge-error dark:badge-outline">
 						Street Community Programmer (SCP)
 					</div>
