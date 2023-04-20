@@ -7,7 +7,7 @@ import favicon32 from '../../public/favicon/favicon-32x32.webp';
 
 function Navbar() {
 	return (
-		<div className="navbar bg-base-100">
+		<div className="navbar shadow-sm backdrop-filter backdrop-blur-lg backdrop-opacity-90">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ function Navbar() {
 					</label>
 					<ul
 						tabIndex={0}
-						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+						className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-auto"
 					>
 						<li>
 							<ActiveLink href="/our-hustle-and-grind">

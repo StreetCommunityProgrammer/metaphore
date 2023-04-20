@@ -5,14 +5,14 @@ import { GiSheep } from 'react-icons/gi';
 function Footer() {
 	return (
 		<div className="mt-auto">
-			<footer className="absolute bottom-0 w-full dark:bg-white bg-zinc-900 px-4 py-2 border-t-2 sm:flex sm:items-center sm:justify-between">
+			<footer className="absolute bottom-0 w-full px-4 py-2 border-t-2 sm:flex sm:items-center sm:justify-between backdrop-filter backdrop-blur-lg backdrop-opacity-90">
 				<div className="flex items-center">
-					<GiSheep size={32} />
-					<p className="ml-2 text-sm sm:text-base">
+					<GiSheep size={32} className='hidden sm:block text-slate-50 dark:text-slate-900' />
+					<p className="ml-2 text-sm sm:text-base sm:text-left text-center text-slate-50 dark:text-slate-900">
 						<Link
 							href="https://www.gnu.org/licenses/licenses.html#GPL"
 							target="_blank"
-							className="font-bold"
+							className="font-bold text-slate-50 dark:text-slate-900"
 						>
 							GNU General Public License (GPLv3)
 						</Link>{' '}
@@ -20,7 +20,7 @@ function Footer() {
 					</p>
 				</div>
 				<div className="flex justify-center mt-2 sm:mt-0 text-center items-center">
-					<span className="font-normal text-sm sm:text-md">Built with</span>
+					<span className="font-normal text-sm sm:text-md text-slate-50 dark:text-slate-900">Built with</span>
 					<Image
 						src="/next.svg"
 						alt="NextJS Icon"
@@ -28,7 +28,7 @@ function Footer() {
 						height={28}
 						className="ml-2 mt-1 bg-white p-1 dark:grayscale"
 					/>
-					<span className="font-normal text-sm sm:text-md">host by</span>
+					<span className="font-normal text-sm sm:text-md text-slate-50 dark:text-slate-900"> host by </span>
 					<Image
 						src="/vercel.svg"
 						alt="Vercel Icon"
