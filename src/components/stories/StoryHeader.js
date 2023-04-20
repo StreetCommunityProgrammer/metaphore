@@ -26,7 +26,7 @@ function StoryHeader({ title, author, language, createdAt }) {
 					</div>
 					<div className="px-2">
 						<span className="text-xs text-zinc-50 dark:text-zinc-900 block">
-							Github Accout
+							GitHub Account
 						</span>
 						<strong className="font-bold text-zinc-50 dark:text-zinc-900 text-sm sm:text-base">
 							<Link href={`https://github.com/${author}`} target="_blank">@{author}</Link>
