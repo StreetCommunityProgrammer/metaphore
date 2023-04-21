@@ -43,10 +43,10 @@ export default function OurHustleandGrind() {
 							Welcome to the Street Community Programmer, where the code is funky fresh and the possibilities are endless.
 						</p>
 						<div className="flex sm:justify-start justify-center gap-3">
-							<a href="#" target="_blank" className="btn btn-sm rounded-md gap-2 dark:btn-ghost btn-active">
+							<a href="https://github.com/StreetCommunityProgrammer/metaphore" target="_blank" className="btn btn-sm rounded-md gap-2 dark:btn-ghost btn-active">
 								<i className="fab fa-github dark:text-white"></i>
 								<span className="capitalize dark:text-white">
-									Github Repository
+									GitHub Repository
 								</span>
 							</a>
 						</div>
