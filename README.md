@@ -1,4 +1,6 @@
-![Metaphor](public/metaphor.png)
+<p align="center">
+    <img src="public/metaphor.png" />
+</p>
 
 <p align="center">
     <h1 align="center">Metaphore</h1>
@@ -8,7 +10,19 @@
     <br><br><br>
 </p>
 
-<p align="center">Every Punk can make any contributions to share your styles and unsual <s>code snippet</s> metaphor that belived it's something <s>wrong</s> different in traditional theory or usual business, but it's work! That our <b>Punk Freestyle Engineer</b>. Welcome to the Street Community Programmer.</p>
+<p align="center">
+    Every Punk can make any contributions to share your styles and unsual <s>code snippet</s> metaphor that belived it's something <s>wrong</s> different in traditional theory or usual business, but it's work! That our <b>Punk Freestyle Engineer</b>. Welcome to the Street Community Programmer.
+</p>
+
+<p align="center">
+    <h2 align="center">How it's work?</h2>
+    <p align="center">- We use <strong>GitHub issues</strong> templates to create a new <code>metaphore</code>.</p>
+    <p align="center">- Once the <code>metaphore</code> is accepted, we use <strong>GitHub Action</strong> to generate a markdown file that contains the <code>metaphore</code>.</p>
+    <p align="center">- The website vercel build is triggered and updated automatically.</p>
+    <p align="center">- Your <code>metaphore</code> is now live online!</p>
+    <p align="center"><strong><a href="https://github.com/StreetCommunityProgrammer/metaphore/issues/new/choose">[ I have a story to list ]</a></strong></p>
+</p>
+
 <br><br><br>
 
 <p align="center">
