@@ -1,7 +1,7 @@
 on:
   fork:
   push:
-    branches: [master]
+    branches: [main]
   issues:
     types: [opened]
   issue_comment:
@@ -15,7 +15,7 @@ jobs:
   welcome:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: StreetCommunityProgrammer/action-collections/metaphor-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
