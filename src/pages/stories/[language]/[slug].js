@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import { seoBanner } from '@/constants/ogimage-rest-generator';
 import { NEXT_APP_NAME, NEXT_BASE_URL } from '@/constants/app-config';
 import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, RedditIcon, RedditShareButton, TwitterIcon, TwitterShareButton } from 'next-share';
+import getTwitterUsername from '@/constants/social-handler';
 
 export async function getStaticPaths() {
 	const posts = getAllStories(`public/collections/stories`);
@@ -29,10 +30,12 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
 	const { language, slug } = context.params;
 	const storyDetail = getSingleStory(slug, language);
+	const tw_user = await getTwitterUsername(storyDetail.frontmatter.author)
+	const story = Object.assign(storyDetail, { twitter_username: tw_user })
 
 	return {
 		props: {
-			data: storyDetail,
+			data: story,
 		},
 	};
 }
@@ -56,7 +59,7 @@ export default function TheStory({ data }) {
 					},
 					images: [
 						{
-							url: seoBanner(data.frontmatter.title, data.frontmatter.author),
+							url: seoBanner(data.frontmatter.title, data.frontmatter.author, 'twitter'),
 							width: 850,
 							height: 650,
 							alt: data.frontmatter.title,
@@ -113,14 +116,14 @@ export default function TheStory({ data }) {
 						</div>
 						<FacebookShareButton
 							url={NEXT_BASE_URL + currentUrl}
-							quote={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+							quote={`Hello Punk, git@${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
 							hashtag={'#MetaphoreSCP #StreetCommunityProgrammer'}
 						>
 							<FacebookIcon size={32} round />
 						</FacebookShareButton>
 						<RedditShareButton
 							url={NEXT_BASE_URL + currentUrl}
-							title={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+							title={`Hello Punk, git@${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
 							windowWidth={660}
 							windowHeight={460}
 						>
@@ -128,7 +131,7 @@ export default function TheStory({ data }) {
 						</RedditShareButton>
 						<TwitterShareButton
 							url={NEXT_BASE_URL + currentUrl}
-							title={`${data.frontmatter.author} telling a story about ${data.frontmatter.title}`}
+							title={`@${data.twitter_username} telling a story about "${data.frontmatter.title}"`}
 						>
 							<TwitterIcon size={32} round />
 						</TwitterShareButton>
