@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="public/metaphor.png" />
+    <img src="https://i.imgur.com/XJTwm8e.png" />
 </p>
 
 <p align="center">
