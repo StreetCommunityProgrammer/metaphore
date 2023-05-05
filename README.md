@@ -6,7 +6,7 @@
     <h1 align="center">Metaphore</h1>
     <p align="center">Public Collections of Metaphore our Freestylers accross the world. Gain knowledge with unusual perspective from our Punk members.</p>
     <p align="center">
-    Every Punk can make any contributions to share your styles and unsual <s>code snippet</s> metaphor that belived it's something <s>wrong</s> different in traditional theory or usual business, but it's work! That our <b>Punk Freestyle Engineer</b>. Welcome to the Street Community Programmer.
+    Every Punk can make contributions to share their styles and unusual <s>code snippet</s> that are believed to be different from traditional theory or usual business, but they work! That's our <b>Punk Freestyle Engineer</b>. Welcome to the Street Community Programmer.
     </p>
     <p align="center"><strong><a href="https://metaphore.vercel.app">See it in action!</a></strong></p>
 </p>
