@@ -32,7 +32,7 @@ export interface SubmenuItems {
 
 export interface NavItems {
     label: string;
-    icon: React.ElementType;
+    icon: React.ReactElement;
     link: string;
     isParent: boolean;
     subMenu?: SubmenuItems[];
@@ -76,7 +76,9 @@ export function Sidebar({ className, menus }: SidebarProps) {
                   return (
                     <Accordion key={`${menu}-${i}`} type="single" collapsible className="w-full">
                       <AccordionItem value="item-1" className="border-b-0">
-                        <AccordionTrigger className={buttonVariants({ size: 'sm', variant: 'ghost', align: 'flexBetween', className: 'hover:no-underline' })}>{menu.label}</AccordionTrigger>
+                        <AccordionTrigger className={buttonVariants({ size: 'sm', variant: 'ghost', align: 'flexBetween', className: 'hover:no-underline' })}>
+                          <span className="inline-flex items-center justify-center gap-1">{menu.icon} {menu.label}</span>
+                        </AccordionTrigger>
                         <AccordionContent>
                           {menu.subMenu?.map((subItem, subIndex) => (
                             <Button
@@ -99,7 +101,7 @@ export function Sidebar({ className, menus }: SidebarProps) {
                       className={buttonVariants({ size: 'sm', variant: 'ghost', align: 'flexLeft' })}
                       href={menu.link}
                     >
-                      {menu.label}
+                      <span className="inline-flex items-center justify-center gap-1">{menu.icon} {menu.label}</span>
                     </Link>
                   );
                 }
@@ -184,26 +186,26 @@ export { Button, buttonVariants }
 Time to put our creation to the test and bring it to life! After following those steps above, it's now time to unleash our masterpiece into the wild. Get ready to work your magic story and implement what we've cooked up so far, just like following a scrumptious recipe. Remember, you're the master chef here, so trust your instincts and let your creativity shine. Brace yourself for the excitement as you witness your creation come alive in all its glory.
 ```typescript
 // Filename: app/page.tsx
+import { Icons } from "@/components/icons"
 import { Sidebar } from "@/components/sidebar"
 import { NavItems } from "@/types/sidebar"
-import { Home, Info, Settings } from "lucide-react"
 
 const menus: NavItems[] = [
   {
     label: "Home",
-    icon: Home,
+    icon: <Icons.home className="w-4 h-4" />,
     link: "/home",
     isParent: false,
   },
   {
     label: "About",
-    icon: Info,
+    icon: <Icons.info className="w-4 h-4" />,
     link: "/about",
     isParent: false,
   },
   {
     label: "Settings",
-    icon: Settings,
+    icon: <Icons.settings className="w-4 h-4" />,
     link: "/settings",
     isParent: true,
     subMenu: [
