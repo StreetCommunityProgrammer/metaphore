@@ -1,4 +1,4 @@
-name: Create Javascript Story
+name: Create JavaScript Story
 description: Add this story to the list
 title: "Your Story Title"
 labels: ["metaphore", "javascript"]
@@ -10,24 +10,24 @@ body:
     - type: textarea
       id: javascript-title
       attributes:
-          label: The Back Story about your Javascript Metaphor
-          placeholder: "hint: describe the back story about your javascript metaphor"
+          label: The Backstory about your JavaScript Metaphor
+          placeholder: "hint: describe the backstory about your JavaScript metaphor"
       validations:
           required: true
     - type: textarea
       id: javascript-content
       attributes:
-          label: The javascript Story!
-          placeholder: "hint: This is about how a write my javascript story"
+          label: The JavaScript Story!
+          placeholder: "hint: This is about how I write my JavaScript story"
       validations:
           required: true
     - type: input
       id: javascript-link
       attributes:
-          label: A Javascript demo/repos link
+          label: A JavaScript demo/repos link
           placeholder: "e.g.: https://github.com.com/username/my-repos"
     - type: input
       id: javascript-donation-link
       attributes:
-          label: PayPal Link for Donation (Javascript Storyteller)
+          label: PayPal Link for Donation (JavaScript Storyteller)
           placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"

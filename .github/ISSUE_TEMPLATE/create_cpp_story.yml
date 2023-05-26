@@ -10,7 +10,7 @@ body:
     - type: textarea
       id: cpp-title
       attributes:
-          label: The Back Story about your C/C++ Metaphor
+          label: The Backstory about your C/C++ Metaphor
           placeholder: "hint: describe the backstory about your C/C++ metaphor"
       validations:
           required: true
@@ -18,7 +18,7 @@ body:
       id: cpp-content
       attributes:
           label: The C/C++ Story!
-          placeholder: "hint: This is about how a write my C/C++ story"
+          placeholder: "hint: This is about how I write my C/C++ story"
       validations:
           required: true
     - type: input

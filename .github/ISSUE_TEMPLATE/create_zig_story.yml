@@ -10,15 +10,15 @@ body:
     - type: textarea
       id: zig-title
       attributes:
-          label: The Back Story about your Zig Metaphor
-          placeholder: "hint: describe the back story about your zig metaphor"
+          label: The Backstory about your Zig Metaphor
+          placeholder: "hint: describe the backstory about your Zig metaphor"
       validations:
           required: true
     - type: textarea
       id: zig-content
       attributes:
-          label: The zig Story!
-          placeholder: "hint: This is about how a write my zig story"
+          label: The Zig Story!
+          placeholder: "hint: This is about how I write my Zig story"
       validations:
           required: true
     - type: input

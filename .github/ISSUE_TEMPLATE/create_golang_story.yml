@@ -1,4 +1,4 @@
-name: Create Golang Story
+name: Create GoLang Story
 description: Add this story to the list
 title: "Your Story Title"
 labels: ["metaphore", "golang"]
@@ -10,24 +10,24 @@ body:
     - type: textarea
       id: golang-title
       attributes:
-          label: The Back Story about your Golang Metaphor
-          placeholder: "hint: describe the back story about your golang metaphor"
+          label: The Backstory about your GoLang Metaphor
+          placeholder: "hint: describe the backstory about your golang metaphor"
       validations:
           required: true
     - type: textarea
       id: golang-content
       attributes:
-          label: The Golang Story!
-          placeholder: "hint: This is about how a write my golang story"
+          label: The GoLang Story!
+          placeholder: "hint: This is about how I write my GoLang story"
       validations:
           required: true
     - type: input
       id: golang-link
       attributes:
-          label: A CSS demo/repos link
+          label: A GoLang demo/repos link
           placeholder: "e.g.: https://github.com.com/username/my-repos"
     - type: input
       id: golang-donation-link
       attributes:
-          label: PayPal Link for Donation (CSS Storyteller)
+          label: PayPal Link for Donation (GoLang Storyteller)
           placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"
