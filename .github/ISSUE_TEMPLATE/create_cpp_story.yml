@@ -1,0 +1,33 @@
+name: Create C/C++ Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "cpp"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: textarea
+      id: cpp-title
+      attributes:
+          label: The Back Story about your C/C++ Metaphor
+          placeholder: "hint: describe the backstory about your C/C++ metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: cpp-content
+      attributes:
+          label: The C/C++ Story!
+          placeholder: "hint: This is about how a write my C/C++ story"
+      validations:
+          required: true
+    - type: input
+      id: cpp-link
+      attributes:
+          label: A C/C++ demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: cpp-donation-link
+      attributes:
+          label: PayPal Link for Donation (C/C++ Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"
