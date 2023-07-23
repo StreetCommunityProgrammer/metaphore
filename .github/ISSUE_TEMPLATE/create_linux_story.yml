@@ -1,0 +1,33 @@
+name: Create Linux Story
+description: Add this story to the list
+title: "Your Story Title"
+labels: ["metaphore", "linux"]
+assignees: ["darkterminal", "mkubdev"]
+body:
+    - type: markdown
+      attributes:
+          value: "**Share the current and relevant details**"
+    - type: textarea
+      id: linux-title
+      attributes:
+          label: The Backstory about your Linux Metaphor
+          placeholder: "hint: describe the backstory about your linux metaphor"
+      validations:
+          required: true
+    - type: textarea
+      id: linux-content
+      attributes:
+          label: The Linux Story!
+          placeholder: "hint: This is about how I write my Linux story"
+      validations:
+          required: true
+    - type: input
+      id: linux-link
+      attributes:
+          label: A Linux demo/repos link
+          placeholder: "e.g.: https://github.com.com/username/my-repos"
+    - type: input
+      id: linux-donation-link
+      attributes:
+          label: PayPal Link for Donation (Linux Storyteller)
+          placeholder: "e.g.: https://www.paypal.me/your-paypal-profile-username"
