@@ -26,7 +26,7 @@ function Footer() {
 						alt="NextJS Icon"
 						width={50}
 						height={28}
-						className="ml-2 mt-1 bg-white p-1 dark:grayscale"
+						className="mx-2 mt-1 bg-white p-1 dark:grayscale"
 					/>
 					<span className="font-normal text-sm sm:text-md text-slate-50 dark:text-slate-900"> host by </span>
 					<Image
