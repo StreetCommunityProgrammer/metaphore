@@ -3,17 +3,24 @@ import {
 	DiCss3Full,
 	DiJava,
 	DiJavascript1,
+	DiLinux,
 	DiPhp,
 	DiPython,
 	DiRuby,
 	DiRust,
 } from 'react-icons/di';
 import { GoBeaker } from 'react-icons/go';
-import { TbMathFunction, TbAtom, TbBrandGolang } from 'react-icons/tb';
+import { TbMathFunction, TbAtom, TbBrandGolang, TbBrandCpp } from 'react-icons/tb';
 import { SiZig } from 'react-icons/si';
 
 function StoryIcon({ language, size = 16, className = 'text-zinc-50' }) {
 	switch (language) {
+		case 'cpp':
+			return <TbBrandCpp size={size} className={className} />;
+			break;
+		case 'linux':
+			return <DiLinux size={size} className={className} />;
+			break;
 		case 'css':
 			return <DiCss3Full size={size} className={className} />;
 			break;
