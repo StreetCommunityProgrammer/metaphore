@@ -1,8 +1,10 @@
 import {
+	cpp,
 	css,
 	golang,
 	java,
 	javascript,
+	linux,
 	maths,
 	php,
 	physics,
@@ -14,6 +16,10 @@ import {
 
 export default function quotePicker(language) {
 	switch (language) {
+		case 'linux':
+			return linux;
+		case 'cpp':
+			return cpp;
 		case 'css':
 			return css;
 		case 'golang':

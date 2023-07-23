@@ -21,6 +21,52 @@ export const javascript = [
 	'JavaScript - the most widely used programming language on the planet.',
 ];
 
+export const linux = [
+	"Linux: Where the fun begins and never ends.",
+	"In a world without walls and fences, who needs Windows and Gates?",
+	"Linux: Because rebooting is for adding new hardware.",
+	"In Linux we trust, all others we virus scan.",
+	"Linux: The open-source heart of technology.",
+	"Linux: Where freedom and innovation collide.",
+	"With Linux, every day is a learning adventure.",
+	"Linux: Empowering users, embracing possibilities.",
+	"Linux: The force that awakens the developer within.",
+	"In the world of operating systems, Linux is the rising sun.",
+	"Linux: Empowering users, one line of code at a time.",
+	"In a world of proprietary software, Linux stands out as a beacon of openness.",
+	"Linux: Where community and collaboration create magic.",
+	"With Linux, the possibilities are as vast as the universe.",
+	"Linux: The penguin-powered revolution of the digital age.",
+	"In the realm of operating systems, Linux reigns supreme.",
+	"Linux: Unlocking the true potential of your hardware.",
+	"In the world of computing, Linux is the heartbeat of innovation.",
+	"Linux: Where coding dreams become reality.",
+	"Linux: Nurturing creativity and imagination since its inception.",
+];
+
+export const cpp = [
+	"C++: Where your friends have access to your private members.",
+	"C++ is the duct tape of programming.",
+	"In C++ it's harder to shoot yourself in the foot, but when you do, you blow off your whole leg.",
+	"C++ is history repeated as tragedy. Java is history repeated as farce.",
+	"C++ is like driving a nail through your foot with a screwdriver.",
+	"C++: It's not a bug; it's a feature.",
+	"C++: an octopus made by nailing extra legs onto a dog.",
+	"In C++, friends have access to your private parts.",
+	"C++: an octopus made by nailing extra legs onto a dog.",
+	"C++ is designed to allow you to express ideas, but if you don't have ideas or don't have any clue about how to express them, C++ doesn't offer much help.",
+	"C++: where your friends can mess with your privates.",
+	"C++: The best performance money can't buy.",
+	"C++: Hard to write; harder to read; hardest to maintain.",
+	"C++: Where your friends can see your private parts.",
+	"C++: The only language that looks like someone took C, added every feature they could find, and stopped halfway, leaving the result an unworkable mess.",
+	"C++: It's a feature, not a bug.",
+	"C++: the language that combines all the elegance and power of assembly language with all the readability and maintainability of assembly language.",
+	"C++: Where friends can access your privates.",
+	"C++: an octopus made by nailing extra legs onto a dog.",
+	"C++: It's like opening Pandora's box and finding the world's most sophisticated box of monsters inside.",
+];
+
 export const css = [
 	'CSS is the visual language of the web.',
 	'CSS is the styling glue that holds the web together.',
